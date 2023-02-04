@@ -1,0 +1,21 @@
+{
+    "name": "Geoloup - Hitsab",
+    "short_name": "Hitsab",
+    "description": "Hitsab is a web browser made with html,css and pure js | made by Geoloup dev team",
+    "icons": [
+        {
+            "src": "/image/logo.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/image/logo144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "theme_color": "#2bff44",
+    "background_color": "#2b52ff"
+}
