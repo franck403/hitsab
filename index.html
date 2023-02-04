@@ -1,1 +1,19 @@
-
+<link rel="stylesheet" href="style.css">
+<img id="loading" src="loading.gif"></img>
+<section id="up">
+    <section id="tab" onload="ltab()"></section>
+    <button onclick="ltab()" class="plus">+</button>
+</section>
+<section class="window">
+    <section id="navigator">
+        <section style="padding: 35vh 0;margin:auto;" id="home">
+            <forum id="input" onkeydown="if(event.key == 'Enter'){search()}">
+                <input id="inputb" placeholder="Search.....">
+                <input id="inputimg" onclick="search()" type="image" value="Login" src="search.svg" height="24" width="24">
+                <input type="submit" style="display: none">
+            </forum>
+            <script src="navigator.js"></script>
+        </section>
+    </section>
+</section>
+<script src="tab.js"></script>
