@@ -4,12 +4,12 @@
     "description": "Hitsab is a web browser made with html,css and pure js | made by Geoloup dev team",
     "icons": [
         {
-            "src": "/image/logo.png",
+            "src": "img/logo.png",
             "sizes": "32x32",
             "type": "image/png"
         },
         {
-            "src": "/image/logo144.png",
+            "src": "img/logo144.png",
             "sizes": "144x144",
             "type": "image/png"
         }
