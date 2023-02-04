@@ -154,11 +154,3 @@ mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 1 + ")}")
 setCookie("actabn",1)
 
 fresh()
-if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function() {
-      navigator.serviceWorker
-        .register("pwa/sw.js")
-        .then(res => console.log("service worker registered"))
-        .catch(err => console.log("service worker not registered", err))
-    })
-}
