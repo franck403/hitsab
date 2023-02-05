@@ -14,6 +14,12 @@ function urlify(text) {
     return text.search(urlRegex, function(url) {return url;})
   }
 
+  function verfy(text) {
+    var test = fetch("https://api.geoloup.com:5000/verfy/adress/test?t=" + text)
+        .then((response) => response.text());
+    console.log(test)
+}
+
 function search(id) {
     var moteur = "https://www.google.com/search?q="
     var url = document.getElementById("inputb").value;
