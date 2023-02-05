@@ -14,7 +14,6 @@ function urlify(text) {
     return text.search(urlRegex, function(url) {return url;})
   }
 function iframe_check(id,url) {
-    var iframe = document.getElementById("new_tab_" + id);
     try {
         var elmnt = iframe.contentWindow.document.getElementsByClassName("neterror");;
         return "error"
@@ -52,12 +51,11 @@ function search(id) {
     iframe.setAttribute("allowfullscreen", "True")
     iframe.setAttribute("src",nurl)
     var other = document.getElementsByTagName('iframe')["new_tab_" + id];
-    var test = iframe_check(nurl);
-    console.log(test)
     try { 
         setCookie("actab", "new_tab_" + id);
         setCookie("actabn",id)
         other.setAttribute("style","visibility: visible;");
+        var test = iframe_check(nurl);
         if (test == "error") {
             tester.document.getElementById("new_tab_" + id);
             tester.remove();
