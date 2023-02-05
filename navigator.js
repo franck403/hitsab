@@ -13,11 +13,14 @@ function urlify(text) {
     var urlRegex = /(https?:\/\/[^\s]+)/g;
     return text.search(urlRegex, function(url) {return url;})
   }
-
-  function verfy(text) {
-    var test = fetch("https://api.geoloup.com:5000/verfy/adress/test?t=" + text)
-        .then((response) => response.text());
-    console.log(test)
+function iframe_check(id,url) {
+    var iframe = document.getElementById("new_tab_" + id);
+    try {
+        var elmnt = iframe.contentWindow.document.getElementsByClassName("neterror");;
+        return "error"
+    } catch {
+        return "ok"
+    }
 }
 
 function search(id) {
@@ -41,19 +44,26 @@ function search(id) {
         localStorage.setItem("tab", ctab)
     }
     localStorage.setItem("tab", mtab);
-
     document.getElementById("navigator").appendChild(iframe);
     iframe.setAttribute("class", "window");
     iframe.setAttribute("id", "new_tab_" + id);
-    iframe.setAttribute("scrolling", "no")
+    iframe.setAttribute("scrolling", "yes")
     iframe.setAttribute("frameborder", "0")
     iframe.setAttribute("allowfullscreen", "True")
     iframe.setAttribute("src",nurl)
     var other = document.getElementsByTagName('iframe')["new_tab_" + id];
+    var test = iframe_check(nurl);
     try { 
-        other.setAttribute("style","visibility: visible;");
         setCookie("actab", "new_tab_" + id);
         setCookie("actabn",id)
+        other.setAttribute("style","visibility: visible;");
+        if (test == "error") {
+            tester.document.getElementById("new_tab_" + id);
+            tester.remove();
+            elerror.document.getElementById("iframe_error");
+            elerror.test('The page does not accept iframe on this website');
+            
+        }
     }
     catch {
         console.log("[no active tab]")

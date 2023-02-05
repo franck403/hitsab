@@ -90,3 +90,8 @@ body {margin-top:0px;margin-left:0px}
     padding-left: 14px;
     outline: none;
 }
+
+#iframe_error {
+    color:red;
+    font-size:30px;
+}

@@ -68,7 +68,7 @@ function tab(id){
         document.getElementById("navigator").appendChild(iframe);
         iframe.setAttribute("class", "window");
         iframe.setAttribute("id", "new_tab_" + id);
-        iframe.setAttribute("scrolling", "no")
+        iframe.setAttribute("scrolling", "yes")
         iframe.setAttribute("frameborder", "0")
         iframe.setAttribute("allowfullscreen", "True")
         iframe.setAttribute("src",url)
