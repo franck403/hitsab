@@ -53,6 +53,7 @@ function search(id) {
     iframe.setAttribute("src",nurl)
     var other = document.getElementsByTagName('iframe')["new_tab_" + id];
     var test = iframe_check(nurl);
+    console.log(test)
     try { 
         setCookie("actab", "new_tab_" + id);
         setCookie("actabn",id)
@@ -62,7 +63,6 @@ function search(id) {
             tester.remove();
             elerror.document.getElementById("iframe_error");
             elerror.test('The page does not accept iframe on this website');
-            
         }
     }
     catch {
