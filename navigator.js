@@ -13,8 +13,9 @@ function urlify(text) {
     var urlRegex = /(https?:\/\/[^\s]+)/g;
     return text.search(urlRegex, function(url) {return url;})
   }
-function iframe_check(id,url) {
+function iframe_check(id) {
     try {
+        var iframe = document.getElementById("new_tab_" + id);
         var elmnt = iframe.contentWindow.document.getElementsByClassName("neterror");;
         return "error"
     } catch {
@@ -55,7 +56,7 @@ function search(id) {
         setCookie("actab", "new_tab_" + id);
         setCookie("actabn",id)
         other.setAttribute("style","visibility: visible;");
-        var test = iframe_check(nurl);
+        var test = iframe_check(id);
         if (test == "error") {
             tester.document.getElementById("new_tab_" + id);
             tester.remove();
