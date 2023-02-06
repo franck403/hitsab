@@ -97,6 +97,8 @@ body {margin-top:0px;margin-left:0px}
 }
 
 .close {
+    position: fixed;
+    top: 0px;
     font-size: 20px;
     color:white;
 }
