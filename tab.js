@@ -93,6 +93,16 @@ function close(id) {
     button_close.remove();
     tab.remove();
 }
+function ftab(mtgb){
+    let ntgb = document.createElement('button');
+    const dtab = ntab
+    ntgb.textContent = 'X';
+    ntgb.id = "close_" + dtab;
+    ntab.class = "close";
+    document.getElementById(dtab).appendChild(ntgb);
+    var jhs = "close" + "(" + dtab + ")"
+    ntgb.setAttribute("onclick", jhs);
+}
 function wtab(mtab) {
     let ntab = document.createElement('button');
     ntab.textContent = 'tab ' + mtab;
@@ -103,14 +113,11 @@ function wtab(mtab) {
     var jhs = "tab" + "(" + mtab + ")"
     ntab.setAttribute("onclick", jhs);
     ntab.setAttribute("class", "hide");
-    let ntgb = document.createElement('button');
-    const dtab = ntab
-    ntgb.textContent = 'X';
-    ntgb.id = "close_" + dtab;
-    ntab.class = "close";
-    document.getElementById(dtab).appendChild(ntgb);
-    var jhs = "close" + "(" + dtab + ")"
-    ntgb.setAttribute("onclick", jhs);
+    try {
+    ftab(mtab)
+    } catch {
+        console.log("error")
+    }
 }
 function ltab() {
     if (typeof (Storage) !== "undefined") {
