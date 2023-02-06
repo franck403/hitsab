@@ -104,11 +104,12 @@ function wtab(mtab) {
     ntab.setAttribute("onclick", jhs);
     ntab.setAttribute("class", "hide");
     let ntgb = document.createElement('button');
+    const dtab = ntab
     ntgb.textContent = 'X';
-    ntgb.id = "close_" + mtab;
+    ntgb.id = "close_" + dtab;
     ntab.class = "close";
-    document.getElementById(mtab).appendChild(ntab);
-    var jhs = "close" + "(" + mtab + ")"
+    document.getElementById(dtab).appendChild(ntab);
+    var jhs = "close" + "(" + dtab + ")"
     ntgb.setAttribute("onclick", jhs);
 }
 function ltab() {
