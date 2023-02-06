@@ -1,16 +1,15 @@
 body {margin-top:0px;margin-left:0px}
-.hide {   
-    color:white;
+.hide {
+    display:table-cell;
     border-color:white;
-    max-width:67px;
+    max-width:73px;
     height:20px;
     border-top-right-radius: 10px 10px;
     border-top-left-radius: 10px 10px;
-    background:black;
+    background:#9b8d8d;
     top: 0px;
-    Visibility:show;
     flex: 1 auto;
-    width: 67px;
+    width: 73px;
     text-align: left;
     font-size: 15px;
 }
@@ -28,25 +27,27 @@ body {margin-top:0px;margin-left:0px}
     right: 2px;
     background: none;
     border: none;
-    height: 30px;
+    height: 28px;
     color: white;
+    background:black;
 }
 #tab {
     background:black;
-    width:100vw;
+    width:97.5vw;
     height:20px;
 }
 .active{
-    color:white;
+    display:table-cell;
     border-color:white;
-    max-width:66px;
+    max-width:73px;
     height:20px;
     border-top-right-radius: 10px 10px;
     border-top-left-radius: 10px 10px;
-    background:rgb(88, 88, 88);
+    background:#808080;
     top: 0px;
-    Visibility:show;
     flex: 1 auto;
+    width: 73px;
+    text-align: left;
     font-size: 15px;
 }
 .window {
@@ -98,10 +99,23 @@ body {margin-top:0px;margin-left:0px}
     font-size:30px;
 }
 
-.hide button {    
-    position: fixed;
-    top: 0px;
-    font-size: 20px;
+.hide button {
+    text-align: right;
+    font-size: 14px;
+    color: white;
+    border: none;
+    background: none;
+}
+.active button {
+    text-align: right;
+    font-size: 14px;
+    color: white;
+    border: none;
+    background: none;
+}
+.buttab {
+    text-align: left;
+    font-size: 14px;
     color: white;
     border: none;
     background: none;

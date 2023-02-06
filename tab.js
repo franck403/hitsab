@@ -52,9 +52,9 @@ function end() {
 }
 
 function tab(id){
-    const mods3 = document.getElementById(id);
+    const mods3 = document.getElementById("div_" + id);
     mods3.setAttribute("class","active")
-    const mods4 = document.getElementById(getCookie("actabn"));
+    const mods4 = document.getElementById("div_" + getCookie("actabn"));
     mods4.setAttribute("class","hide")
 
     url = getCookie("new_tab_" + id);
@@ -95,23 +95,25 @@ function close(id) {
     tab.remove();
 }
 function ftab(mtab){
-    let ntgb = document.createElement('button');
-    ntgb.textContent = 'X';
-    ntgb.id = "close_" + mtab;
-    ntgb.class = "close";
-    document.getElementById(mtab).appendChild(ntgb);
-    var jhs = "close" + "(" + mtab + ")"
-    ntgb.setAttribute("onclick", jhs);
-}
-function wtab(mtab) {
     let ntab = document.createElement('button');
     ntab.textContent = 'tab ' + mtab;
     ntab.onclick = 'tab' + mtab;
     ntab.id = mtab;
-    ntab.class = "hide";
-    document.getElementById('tab').appendChild(ntab);
+    document.getElementById('div_' + mtab).appendChild(ntab);
     var jhs = "tab" + "(" + mtab + ")"
     ntab.setAttribute("onclick", jhs);
+    ntab.setAttribute("class", "buttab");
+    let ntgb = document.createElement('button');
+    ntgb.textContent = 'X';
+    ntgb.id = "close_" + mtab;
+    document.getElementById("div_" + mtab).appendChild(ntgb);
+    var jhs = "close" + "(" + mtab + ")"
+    ntgb.setAttribute("onclick", jhs);
+}
+function wtab(mtab) {
+    let ntab = document.createElement('section');
+    ntab.id = "div_" + mtab;
+    document.getElementById('tab').appendChild(ntab);
     ntab.setAttribute("class", "hide");
     ftab(mtab)
 }
@@ -139,14 +141,13 @@ function fresh() {
     const mtab = parseFloat(localStorage.getItem("tab"));
     localStorage.setItem("tab", 1)
     if (mtab < 30) {
-        var ctab = 0
+        var ctab = 1
         while (ctab < mtab) {
             console.log("[info] Loading tab.")
             wtab(parseFloat(localStorage.getItem("tab")));
             var ctab = ctab + 1
             localStorage.setItem("tab", ctab)
         }
-        document.getElementById(1).remove();
         localStorage.setItem("tab", mtab);
         end();
     }else {
