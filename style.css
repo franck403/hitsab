@@ -2,7 +2,7 @@ body {margin-top:0px;margin-left:0px}
 .hide {   
     color:white;
     border-color:white;
-    max-width:66px;
+    max-width:67px;
     height:20px;
     border-top-right-radius: 10px 10px;
     border-top-left-radius: 10px 10px;
@@ -10,6 +10,8 @@ body {margin-top:0px;margin-left:0px}
     top: 0px;
     Visibility:show;
     flex: 1 auto;
+    width: 67px;
+    text-align: left;
     font-size: 15px;
 }
 .show {

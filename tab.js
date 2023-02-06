@@ -90,6 +90,7 @@ function close(id) {
     const button_close = document.getElementById("close_" + id);
     const tab = document.getElementById("new_tab_" + id);
     button.remove();
+    setCookie("tab",parseFloat(getCookie("tab")) -1 )
     button_close.remove();
     tab.remove();
 }
