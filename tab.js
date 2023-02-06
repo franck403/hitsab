@@ -97,7 +97,7 @@ function ftab(mtab){
     let ntgb = document.createElement('button');
     ntgb.textContent = 'X';
     ntgb.id = "close_" + mtab;
-    ntab.class = "close";
+    ntgb.class = "close";
     document.getElementById(mtab).appendChild(ntgb);
     var jhs = "close" + "(" + mtab + ")"
     ntgb.setAttribute("onclick", jhs);
