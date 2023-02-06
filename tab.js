@@ -93,14 +93,13 @@ function close(id) {
     button_close.remove();
     tab.remove();
 }
-function ftab(mtgb){
+function ftab(mtab){
     let ntgb = document.createElement('button');
-    const dtab = ntab
     ntgb.textContent = 'X';
-    ntgb.id = "close_" + dtab;
+    ntgb.id = "close_" + mtab;
     ntab.class = "close";
-    document.getElementById(dtab).appendChild(ntgb);
-    var jhs = "close" + "(" + dtab + ")"
+    document.getElementById(mtab).appendChild(ntgb);
+    var jhs = "close" + "(" + mtab + ")"
     ntgb.setAttribute("onclick", jhs);
 }
 function wtab(mtab) {
@@ -114,7 +113,7 @@ function wtab(mtab) {
     ntab.setAttribute("onclick", jhs);
     ntab.setAttribute("class", "hide");
     try {
-    ftab(mtab)
+        ftab(mtab)
     } catch {
         console.log("error")
     }
