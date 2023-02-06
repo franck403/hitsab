@@ -85,7 +85,14 @@ function tab(id){
     setCookie("actab","new_tab_" + id)
     setCookie("actabn",id)
 }
-
+function close(id) {
+    const button = document.getElementById(id);
+    const button_close = document.getElementById("close_" + id);
+    const tab = document.getElementById("new_tab_" + id);
+    button.remove();
+    button_close.remove();
+    tab.remove();
+}
 function wtab(mtab) {
     let ntab = document.createElement('button');
     ntab.textContent = 'tab ' + mtab;
@@ -96,6 +103,13 @@ function wtab(mtab) {
     var jhs = "tab" + "(" + mtab + ")"
     ntab.setAttribute("onclick", jhs);
     ntab.setAttribute("class", "hide");
+    let ntgb = document.createElement('button');
+    ntgb.textContent = 'X';
+    ntgb.id = "close_" + mtab;
+    ntab.class = "close";
+    document.getElementById(mtab).appendChild(ntab);
+    var jhs = "close" + "(" + mtab + ")"
+    ntgb.setAttribute("onclick", jhs);
 }
 function ltab() {
     if (typeof (Storage) !== "undefined") {
