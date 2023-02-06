@@ -108,7 +108,7 @@ function wtab(mtab) {
     ntgb.textContent = 'X';
     ntgb.id = "close_" + dtab;
     ntab.class = "close";
-    document.getElementById(dtab).appendChild(ntab);
+    document.getElementById(dtab).appendChild(ntgb);
     var jhs = "close" + "(" + dtab + ")"
     ntgb.setAttribute("onclick", jhs);
 }
