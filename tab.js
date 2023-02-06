@@ -112,11 +112,7 @@ function wtab(mtab) {
     var jhs = "tab" + "(" + mtab + ")"
     ntab.setAttribute("onclick", jhs);
     ntab.setAttribute("class", "hide");
-    try {
-        ftab(mtab)
-    } catch {
-        console.log("error")
-    }
+    ftab(mtab)
 }
 function ltab() {
     if (typeof (Storage) !== "undefined") {
