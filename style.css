@@ -2,15 +2,14 @@ body {margin-top:0px;margin-left:0px}
 .hide {
     display:table-cell;
     border-color:white;
-    max-width:73px;
+    max-width:53px;
     height:20px;
     border-top-right-radius: 10px 10px;
     border-top-left-radius: 10px 10px;
     background:#9b8d8d;
     top: 0px;
     flex: 1 auto;
-    width: 73px;
-    text-align: left;
+    text-align: center;
     font-size: 15px;
 }
 .show {
@@ -30,10 +29,24 @@ body {margin-top:0px;margin-left:0px}
     height: 28px;
     color: white;
     background:black;
+    width:2vw;
+}
+.option {
+    font-size: 30px;
+    float: left;
+    position: fixed;
+    top: -8px;
+    right: 0px;
+    background: none;
+    border: none;
+    height: 28px;
+    color: white;
+    background:black;
+    width:4.5vw;
 }
 #tab {
     background:black;
-    width:97.5vw;
+    width:95.5vw;
     height:20px;
 }
 .active{
@@ -99,6 +112,20 @@ body {margin-top:0px;margin-left:0px}
     font-size:30px;
 }
 
+.active button {
+    text-align: right;
+    font-size: 14px;
+    color: white;
+    border: none;
+    background: none;
+}
+.buttab {
+    text-align: left;
+    font-size: 14px;
+    color: white;
+    border: none;
+    background: none;
+}
 .hide button {
     text-align: right;
     font-size: 14px;
@@ -113,10 +140,17 @@ body {margin-top:0px;margin-left:0px}
     border: none;
     background: none;
 }
-.buttab {
-    text-align: left;
-    font-size: 14px;
-    color: white;
-    border: none;
+
+.close {
+    font-size: 25px;
+    float: left;
+    position: fixed;
+    top: -7px;
+    right: 2vw;
     background: none;
+    border: none;
+    height: 28px;
+    color: white;
+    background:black;
+    width:2vw;
 }
