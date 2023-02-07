@@ -86,7 +86,7 @@ function tab(id){
     setCookie("actabn",id)
 }
 function close() {
-    id = getCookie("actab")
+    id = getCookie("actabn")
     const button = document.getElementById(id);
     const button_close = document.getElementById("close_" + id);
     const tab = document.getElementById("div_" + id);
