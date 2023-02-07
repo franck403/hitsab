@@ -52,15 +52,14 @@ body {margin-top:0px;margin-left:0px}
 .active{
     display:table-cell;
     border-color:white;
-    max-width:73px;
+    max-width:53px;
     height:20px;
     border-top-right-radius: 10px 10px;
     border-top-left-radius: 10px 10px;
-    background:#808080;
+    background:#9b8d8d;
     top: 0px;
     flex: 1 auto;
-    width: 73px;
-    text-align: left;
+    text-align: center;
     font-size: 15px;
 }
 .window {
