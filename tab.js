@@ -51,7 +51,7 @@ function end() {
     });
 }
 
-function tab(id){
+function tab0(id){
     const mods3 = document.getElementById("div_" + id);
     mods3.setAttribute("class","active")
     const mods4 = document.getElementById("div_" + getCookie("actabn"));
@@ -85,6 +85,21 @@ function tab(id){
     setCookie("actab","new_tab_" + id)
     setCookie("actabn",id)
 }
+function tab1(id){
+    try { 
+        var other = document.getElementsByTagName('iframe')[getCookie("actab")];
+        other.setAttribute("style","visibility: hidden;");
+        var others = document.getElementsByTagName('iframe')["new_tab_" + id];
+        others.setAttribute("style","visibility: visible;");
+    }
+    catch {}
+    setCookie("actab","new_tab_" + id)
+    setCookie("actabn",id)
+}
+function tab(id){
+   tab0(id);
+   tab1(id)
+}
 function close() {
     id = getCookie("actabn")
     if (id == 1) {
@@ -100,9 +115,12 @@ function close() {
         const iframe = document.getElementById("new_tab_" + id);
         const tab = document.getElementById("div_" + id);
         button.remove();
-        iframe.remove();
+        try {
+            iframe.remove();
+        } catch {
+            console.log("[info] no iframe open ")
+        }
         setCookie("tab",parseFloat(getCookie("tab")) -1 )
-        button_close.remove();
         tab.remove();
     }
 
