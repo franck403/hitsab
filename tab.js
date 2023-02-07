@@ -168,3 +168,5 @@ mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 1 + ")}")
 setCookie("actabn",1)
 
 fresh()
+
+document.getElementById("close").addEventListener("click", close);
