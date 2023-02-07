@@ -89,8 +89,12 @@ function close() {
     id = getCookie("actabn")
     if (id == 1) {
         console.log("[info] You can't delete the first tab ")
-        const iframe = document.getElementById("new_tab_" + id);
-        iframe.remove();
+        try {
+            const iframe = document.getElementById("new_tab_" + id);
+            iframe.remove();
+        } catch {
+            console.log("[info] no iframe open")
+        }
     } else {
         const button = document.getElementById(id);
         const iframe = document.getElementById("new_tab_" + id);
