@@ -87,13 +87,21 @@ function tab(id){
 }
 function close() {
     id = getCookie("actabn")
-    const button = document.getElementById(id);
-    const button_close = document.getElementById("close_" + id);
-    const tab = document.getElementById("div_" + id);
-    button.remove();
-    setCookie("tab",parseFloat(getCookie("tab")) -1 )
-    button_close.remove();
-    tab.remove();
+    if (id == 1) {
+        console.log("[info] You can't delete the first tab ")
+        const iframe = document.getElementById("new_tab_" + id);
+        iframe.remove();
+    } else {
+        const button = document.getElementById(id);
+        const iframe = document.getElementById("new_tab_" + id);
+        const tab = document.getElementById("div_" + id);
+        button.remove();
+        iframe.remove();
+        setCookie("tab",parseFloat(getCookie("tab")) -1 )
+        button_close.remove();
+        tab.remove();
+    }
+
 }
 function ftab(mtab){
     let ntab = document.createElement('button');
