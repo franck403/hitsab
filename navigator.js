@@ -17,7 +17,6 @@ function iframe_check(id) {
     try {
         console.log(id)
         var iframe = document.getElementById("new_tab_" + id);
-        consoleélog(iframe)
         var elmnt = iframe.contentWindow.document.getElementsByClassName("neterror");;
         console.log(wlmnt)
         return "error"
