@@ -41,4 +41,7 @@ window.onload = () => {
         // On va chercher le menu et on lui retire la classe "active"
         document.querySelector("#context-menu").classList.remove("active");
     });
+    document.addEventListener("", function(event){
+
+    }
 }
