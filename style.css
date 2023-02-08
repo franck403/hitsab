@@ -192,5 +192,7 @@ body {margin-top:0px;margin-left:0px}
     background-color: grey;
     margin: 5px 0;
 }
-
+.menu-separator-information{
+    margin: 5px 0;
+}
 /* right click menu end */
