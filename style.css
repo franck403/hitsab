@@ -106,6 +106,9 @@ body {margin-top:0px;margin-left:0px}
     outline: none;
 }
 
+
+/* search bar end */
+
 #iframe_error {
     color:red;
     font-size:30px;
@@ -153,3 +156,41 @@ body {margin-top:0px;margin-left:0px}
     background:black;
     width:2vw;
 }
+
+
+/* right click menu */
+
+#context-menu{
+    position: absolute;
+    border: 1px solid #d3d3d3;
+    background-color: #e3e3e3;
+    padding: 10px 0;
+    z-index: 100000;
+    display: none;
+}
+
+#context-menu.active{
+    display: initial;
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item{
+    padding: 0 10px;
+}
+
+.menu-item:hover{
+    background-color: #d3d3d3;
+}
+
+.menu-separator{
+    height: 1px;
+    background-color: grey;
+    margin: 5px 0;
+}
+
+/* right click menu end */
