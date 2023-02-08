@@ -15,7 +15,7 @@ function proxy_end(){
     if (v == null) {}
     else {
         console.log("[info] stoping the proxy");
-        localStorage.setItem("proxy", "stop");
+        localStorage.removeItem("proxy");
         console.log("[info] proxy stopped");
     }
 }
