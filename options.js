@@ -9,7 +9,7 @@ window.onload = () => {
         let menu = document.querySelector("#context-menu");
 
         // On met ou retire la classe active
-        menu.classList.toggle("active");
+        menu.classList.toggle("click_active");
 
         // On ouvre le menu là où se trouve la souris
         // On récupère les coordonnées de la souris

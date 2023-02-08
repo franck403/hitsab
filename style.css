@@ -169,7 +169,7 @@ body {margin-top:0px;margin-left:0px}
     display: none;
 }
 
-#context-menu.active{
+#context-menu.click_active{
     display: initial;
 }
 
