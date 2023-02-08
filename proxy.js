@@ -4,7 +4,7 @@ function proxy_start(){
     var v = localStorage.getItem("proxy");
     if (v == null) {
         console.log("[info] starting the api");
-        fetch("https://proxy6.francoischouin1.repl.co/");
+        fetch("options/proxy.js");
         console.log("[info] api is started")
         localStorage.setItem("proxy", "on");
     } 
