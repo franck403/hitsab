@@ -39,6 +39,6 @@ window.onload = () => {
     // On écoute le clic pour retirer le menu
     document.addEventListener("click", function(){
         // On va chercher le menu et on lui retire la classe "active"
-        document.querySelector("#context-menu").classList.remove("active");
+        document.querySelector("#context-menu").classList.remove("click_active");
     });
 }
