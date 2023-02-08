@@ -203,3 +203,5 @@ setCookie("actabn",1)
 fresh()
 
 document.getElementById("close").addEventListener("click", close);
+
+document.getElementById("close2").addEventListener("click", close);
