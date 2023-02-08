@@ -98,10 +98,10 @@ function tab1(id){
 }
 function tab(id){
    tab0(id);
-   tab1(id)
+   tab1(id);
 }
 function close() {
-    id = getCookie("actabn")
+    var id = getCookie("actabn")
     if (id == 1) {
         console.log("[info] You can't delete the first tab ")
         try {
@@ -123,7 +123,9 @@ function close() {
         setCookie("tab",parseFloat(getCookie("tab")) -1 );
         setCookie("actabn",parseFloat(getCookie("actabn")) -1 );
         setCookie("actab",parseFloat(getCookie("actab")) -1 );
-        tab(getCookie("actabn"));
+        var id = getCookie("actabn")
+        tab0(id);
+        tab1(id);
         tab.remove();
     }
 
