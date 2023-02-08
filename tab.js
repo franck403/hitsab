@@ -120,7 +120,10 @@ function close() {
         } catch {
             console.log("[info] no iframe open ")
         }
-        setCookie("tab",parseFloat(getCookie("tab")) -1 )
+        setCookie("tab",parseFloat(getCookie("tab")) -1 );
+        setCookie("actabn",parseFloat(getCookie("actabn")) -1 );
+        setCookie("actab",parseFloat(getCookie("actab")) -1 );
+        tab(getCookie("actabn"));
         tab.remove();
     }
 
