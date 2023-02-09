@@ -124,6 +124,7 @@ function close() {
         setCookie("actabn",parseFloat(getCookie("actabn")) -1 );
         setCookie("actab",parseFloat(getCookie("actab")) -1 );
         var id = getCookie("actabn")
+        setCookie("actabm",id + 1)
         tab0(id);
         tab1(id);
         tab.remove();
@@ -154,6 +155,7 @@ function ltab() {
             if (mtab < 30) {
             console.log("[info] tab added to the cache")
             localStorage.setItem("tab", mtab+1);
+            setCookie("actabm",mtab + 1)
             wtab(mtab);
             } else {
                 console.log("[info] maximum the tab is 30")
