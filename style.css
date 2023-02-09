@@ -99,9 +99,8 @@ body {margin-top:0px;margin-left:0px}
 
 #inputimg {
     position: absolute;
-    left: 0;
-    top: -1px;
-    padding-left: 14px;
+    right: 0;
+    padding-right: 14px;
     outline: none;
 }
 
