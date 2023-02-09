@@ -100,6 +100,9 @@ body {margin-top:0px;margin-left:0px}
 #inputimg {
     position: absolute;
     right: 0;
+    top: 0;
+    display: flex;
+    align-self: center;
     padding-right: 14px;
     outline: none;
 }
