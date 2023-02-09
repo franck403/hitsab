@@ -178,6 +178,10 @@ body {margin-top:0px;margin-left:0px}
     margin: 0;
 }
 
+.menu li{
+    cursor: pointer;
+}
+
 .menu-item{
     padding: 0 10px;
 }
