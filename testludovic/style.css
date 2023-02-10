@@ -25,9 +25,11 @@
     width: 40vw;
     background-color: black;
 }
+#text-area::after{
+    animation: .5s ease-in-out text-area_r;
+}
 #text-area:hover{
     animation: .5s ease-in-out text-area;
-    background-color: white;
 }
 #text-area:focus{
     background-color: white;
@@ -39,7 +41,15 @@
     100% {
        background-color: white;
     }
- }
+}
+@keyframes text-area_r{
+    0%{
+        background-color: white;
+    }
+    100%{
+        background-color: black;
+    }
+}
 
 button{
     border: none;
