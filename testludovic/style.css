@@ -27,12 +27,14 @@
 }
 #text-area:hover{
     animation: .5s ease-in-out text-area;
+    background-color: white;
 }
 #text-area:hover:not(:hover){
     animation: .5s ease-in-out text-area_r;    
 }
 #text-area:focus{
     animation: .5s ease-in-out text-area;
+    background-color: white;
 }
 #text-area:focus:not(:focus){
     animation: .5s ease-in-out text-area_r;
