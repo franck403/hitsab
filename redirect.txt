@@ -1,1 +1,1 @@
-swq
+/v2 /testludovic/index.html 200
