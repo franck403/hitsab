@@ -2,8 +2,7 @@
     from="/*"
     to="/index.html"
     status="200"
-
+[[redirects]]
     from="/v2"
     to="/testludovic/index.html"
     status="200"
-    
