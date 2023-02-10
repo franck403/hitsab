@@ -19,9 +19,16 @@
 }
 
 #text-area{
+    border: none;
     border-radius: 10px;
     height: 3vh;
     width: 40vw;
+    background-color: black;
+    color: white;
+}
+#text-area:hover{
+    background-color: white;
+    color: black;
 }
 
 button{
