@@ -14,7 +14,7 @@
 #test_area{
     position: absolute;
     left: 50%;
-    top: 2vh;
+    top: 1vh;
     transform: translate(-50%);
 }
 
