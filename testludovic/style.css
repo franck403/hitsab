@@ -30,7 +30,8 @@
     background-color: white;
 }
 #text-area:hover:not(:hover){
-    animation: .5s ease-in-out text-area_r;    
+    animation: .5s ease-in-out text-area_r;
+    background-color: black;
 }
 #text-area:focus{
     animation: .5s ease-in-out text-area;
@@ -38,6 +39,7 @@
 }
 #text-area:focus:not(:focus){
     animation: .5s ease-in-out text-area_r;
+    background-color: black;
 }
 @keyframes text-area{
     0% {
