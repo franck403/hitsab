@@ -11,6 +11,13 @@
     height: 5vh;
 }
 
+#test_area{
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+}
+
 button{
     border: none;
     background: none;
