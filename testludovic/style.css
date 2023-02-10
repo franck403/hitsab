@@ -32,7 +32,7 @@
     animation: .5s ease-in-out text-area_r;    
 }
 #text-area:focus{
-    background-color: white;
+    animation: .5s ease-in-out text-area;
 }
 #text-area:focus:not(:focus){
     animation: .5s ease-in-out text-area_r;
