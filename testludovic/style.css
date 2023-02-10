@@ -38,7 +38,7 @@
     animation-fill-mode: forwards;
 }
 #text-area:focus:not(:focus){
-    animation: .5s ease-in-out text-area_r;
+    animation: .5s ease-in text-area_r;
     animation-fill-mode: forwards;
 }
 @keyframes text-area{
