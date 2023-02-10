@@ -25,14 +25,17 @@
     width: 40vw;
     background-color: black;
 }
-#text-area::after{
-    animation: .5s ease-in-out text-area_r;
-}
 #text-area:hover{
     animation: .5s ease-in-out text-area;
 }
+#text-area:hover:not(:hover){
+    animation: .5s ease-in-out text-area_r;    
+}
 #text-area:focus{
     background-color: white;
+}
+#text-area:focus:not(:focus){
+    animation: .5s ease-in-out text-area_r;
 }
 @keyframes text-area{
     0% {
