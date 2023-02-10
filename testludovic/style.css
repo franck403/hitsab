@@ -10,3 +10,8 @@
 #menu img{
     height: 5vh;
 }
+
+button{
+    border: none;
+    background: none;
+}
