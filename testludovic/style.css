@@ -18,6 +18,11 @@
     transform: translate(-50%);
 }
 
+#text-area{
+    border-radius: 10px;
+    width: 50vw;
+}
+
 button{
     border: none;
     background: none;
