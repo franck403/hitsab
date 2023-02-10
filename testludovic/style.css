@@ -26,11 +26,20 @@
     background-color: black;
 }
 #text-area:hover{
+    animation: .5s ease-in-out text-area;
     background-color: white;
 }
 #text-area:focus{
     background-color: white;
 }
+@keyframes text-area{
+    0% {
+       background-color: black;
+    }
+    100% {
+       background-color: white;
+    }
+ }
 
 button{
     border: none;
