@@ -29,23 +29,23 @@
 #text-area:hover{
     background-color: white;
 }
-#text-area:hover + input::-webkit-input-placeholder {
+#text-area:hover input::-webkit-input-placeholder {
     color: black;
 }
 
-#text-area:hover + input:-moz-placeholder { 
+#text-area:hover input:-moz-placeholder { 
     color: black;  
 }
 
-#text-area:hover + input::-moz-placeholder {  
+#text-area:hover input::-moz-placeholder {  
     color: black;  
 }
 
-#text-area:hover + input:-ms-input-placeholder {  
+#text-area:hover input:-ms-input-placeholder {  
     color: black;  
 }
 
-#text-area:hover + input:-o-input-placeholder {  
+#text-area:hover input:-o-input-placeholder {  
     color: black;  
 }
 button{
