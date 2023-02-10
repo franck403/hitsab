@@ -157,9 +157,6 @@ function ltab() {
             localStorage.setItem("tab", mtab+1);
             setCookie("actabm",mtab + 1)
             wtab(mtab);
-            $(function(){
-                $("#tab").add("onglet.html");
-            });
             } else {
                 console.log("[info] maximum the tab is 30")
             }
