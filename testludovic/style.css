@@ -1,5 +1,8 @@
 #navigation{
-    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20vh;
     width: 100vw;
     background-color: black;
 }
