@@ -24,30 +24,14 @@
     height: 3vh;
     width: 40vw;
     background-color: black;
-    color: white;
 }
 #text-area:hover{
     background-color: white;
 }
-#text-area:hover input::-webkit-input-placeholder {
-    color: black;
+#text-area:focus{
+    background-color: white;
 }
 
-#text-area:hover input:-moz-placeholder { 
-    color: black;  
-}
-
-#text-area:hover input::-moz-placeholder {  
-    color: black;  
-}
-
-#text-area:hover input:-ms-input-placeholder {  
-    color: black;  
-}
-
-#text-area:hover input:-o-input-placeholder {  
-    color: black;  
-}
 button{
     border: none;
     background: none;
