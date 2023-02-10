@@ -6,3 +6,8 @@
     width: 100vw;
     background-color: black;
 }
+
+#menu img{
+    width: inherit;
+    height: inherit;
+}
