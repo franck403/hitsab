@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="script.js"></script>
     <style>
       .navbar {
         display: flex;
@@ -36,11 +35,8 @@
         cursor: pointer;
       }
 
-      .navbar .tabs button[data-status="active"]{
+      .navbar .tabs button.active {
         border-bottom: 2px solid blue;
-      }
-      .navbar .tabs button[data-status="inactive"]{
-        border-bottom: none;
       }
 
       .navbar .actions {
@@ -63,14 +59,27 @@
     <nav class="navbar">
       <input type="text" placeholder="Rechercher">
       <div class="tabs">
-        <button id="1" onclick="index(1)" data-status="active">Onglet 1</button>
-        <button id="2" onclick="index(2)" data-status="inactive">Onglet 2</button>
-        <button id="3" onclick="index(3)" data-status="inactive">Onglet 3</button>
+        <button class="active" data-status="active">Onglet 1</button>
+        <button data-status="inactive">Onglet 2</button>
+        <button data-status="inactive">Onglet 3</button>
       </div>
       <div class="actions">
         <button>X</button>
         <button>+</button>
       </div>
     </nav>
+    <script>
+      const tabs = document.querySelectorAll(".tabs button");
+      tabs.forEach(tab => {
+        tab.addEventListener("click", function() {
+          tabs.forEach(t => {
+            t.setAttribute("data-status", "inactive");
+            t.classList.remove("active");
+          });
+          this.setAttribute("data-status", "active");
+          this.classList.add("active");
+        });
+      });
+    </script>
   </body>
 </html>
