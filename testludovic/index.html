@@ -97,12 +97,13 @@
 
             // Sélectionner le nouvel onglet
             newTab.setAttribute("data-status", "active");
-            newTab.addEventListener("click", function() {
-                const tabs = document.querySelectorAll(".tabs button");
-                Array.from(tabs.childNodes).forEach(function(tab) {
-                    tab.setAttribute("data-status", "inactive");
+            Array.from(tabs).forEach(tab => {
+                tab.addEventListener("click", function(){
+                    Array.from(tabs).forEach(function(tab) {
+                        tab.setAttribute("data-status", "inactive");
+                    });
+                    this.setAttribute("data-status", "active");
                 });
-                this.setAttribute("data-status", "active");
             });
         });
         /*REMOVE TAB*/
