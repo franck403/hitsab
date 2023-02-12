@@ -100,6 +100,11 @@
         removeTabButton.addEventListener("click", function() {
             const activeTab = document.querySelector(".tabs button[data-status='active']");
             activeTab.remove();
+
+            const tabs = document.querySelectorAll(".tabs button");
+            if (tabs.length > 0) {
+                tabs[0].setAttribute("data-status", "active");
+            }
         });
     </script>
 </body>
