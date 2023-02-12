@@ -91,17 +91,16 @@
             newTab.setAttribute("data-status", "active");
             tabs.appendChild(newTab);
             
-            Array.from(tabs.childNodes).forEach(function(tab) {
+            Array.from(tabs.children).forEach(function(tab) {
                 tab.setAttribute("data-status", "inactive");
-            });
 
-            tabs.childNodes.addEventListener("click", function(){
-                Array.from(tabs).forEach(function(tab) {
-                    tab.setAttribute("data-status", "inactive");
+            tab.addEventListener("click", function() {
+                Array.from(tabs.children).forEach(function(tab) {
+                        tab.setAttribute("data-status", "inactive");
+                    });
+                    this.setAttribute("data-status", "active");
                 });
-                this.setAttribute("data-status", "active");
             });
-            
         });
         /*REMOVE TAB*/
         const removeTabButton = document.getElementById("removeTab");
