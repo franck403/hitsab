@@ -70,6 +70,7 @@
     </nav>
     <script>
         /*TAB CLICK*/
+        const tab = 
         const tabs = document.querySelectorAll(".tabs button");
             tabs.forEach(tab => {
                 tab.addEventListener("click", function(){
@@ -82,7 +83,7 @@
         /*ADD TAB*/
         const addTabButton = document.getElementById("addTab");
         addTabButton.addEventListener("click", function() {
-            const tabs = document.querySelector(".tabs");
+            const tabs = document.querySelector(".tabs button");
             const newTab = document.createElement("button");
             newTab.innerText = "Onglet " + (tabs.childNodes.length + 1);
             tabs.appendChild(newTab);
