@@ -95,12 +95,10 @@
                 this.setAttribute("data-status", "active");
             });
 
-            // Désélectionner tous les onglets
             Array.from(tabs.childNodes).forEach(function(tab) {
                 tab.setAttribute("data-status", "inactive");
             });
 
-            // Sélectionner le nouvel onglet
             newTab.setAttribute("data-status", "active");
         });
 
