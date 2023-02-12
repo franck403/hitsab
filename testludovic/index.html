@@ -98,11 +98,15 @@
 
         const removeTabButton = document.getElementById("removeTab");
         removeTabButton.addEventListener("click", function() {
+            const tabs = document.querySelectorAll(".tabs button");
+            if (tabs.length === 1) {
+                return;
+            }
+
             const activeTab = document.querySelector(".tabs button[data-status='active']");
             activeTab.remove();
 
-            const tabs = document.querySelectorAll(".tabs button");
-            if (tabs.length > 0) {
+            if (tabs.length > 1) {
                 tabs[0].setAttribute("data-status", "active");
             }
         });
