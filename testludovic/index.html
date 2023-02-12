@@ -83,10 +83,11 @@
             });
         });
         /*ADD TAB*/
+        const element = document.getElementsByClassName("tabs");
         const addTabButton = document.getElementById("addTab");
         addTabButton.addEventListener("click", function() {
             const tabs = document.querySelector(".tabs button");
-            const newTab = document.createElement("button");
+            const newTab = element.createElement("button");
             newTab.innerText = "Onglet " + (tabs.childNodes.length + 1);
             tabs.appendChild(newTab);
             
