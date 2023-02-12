@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <style>
       .navbar {
         display: flex;
@@ -54,8 +54,8 @@
         cursor: pointer;
       }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <nav class="navbar">
       <div class="tabs">
         <button class="active" data-status="active">Onglet 1</button>
@@ -65,7 +65,7 @@
       <input type="text" placeholder="Rechercher">
       <div class="actions">
         <button id="addTab">+</button>
-        <button>X</button>
+        <button id="removeTab">X</button>
       </div>
     </nav>
     <script>
@@ -81,18 +81,25 @@
 
         const addTabButton = document.getElementById("addTab");
         addTabButton.addEventListener("click", function() {
-        const tabsContainer = document.querySelector(".tabs");
-        const newTab = document.createElement("button");
-        newTab.innerHTML = "Nouvel onglet";
-        newTab.setAttribute("data-status", "inactive");
-        tabsContainer.appendChild(newTab);
+            const tabsContainer = document.querySelector(".tabs");
+            const newTab = document.createElement("button");
+            newTab.innerHTML = "Nouvel onglet";
+            newTab.setAttribute("data-status", "inactive");
+            tabsContainer.appendChild(newTab);
 
-        newTab.addEventListener("click", function() {
-        const tabs = document.querySelectorAll(".tabs button");
-            tabs.forEach(tab => {
-                tab.setAttribute("data-status", "inactive");
-            });
-            this.setAttribute("data-status", "active");
+            newTab.addEventListener("click", function() {
+                const tabs = document.querySelectorAll(".tabs button");
+                    tabs.forEach(tab => {
+                        tab.setAttribute("data-status", "inactive");
+                    });
+                    this.setAttribute("data-status", "active");
+                });
         });
-    });
+
+        const removeTabButton = document.getElementById("removeTab");
+        removeTabButton.addEventListener("click", function() {
+            const activeTab = document.querySelector(".tabs button[data-status='active']");
+            activeTab.remove();
+        });
     </script>
+</body>
