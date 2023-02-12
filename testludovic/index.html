@@ -85,21 +85,22 @@
         /*ADD TAB*/
         const addTabButton = document.getElementById("addTab");
         addTabButton.addEventListener("click", function() {
-            const tabs = tabsContainer.querySelector(".tabs button");
+            const tabsContainer = document.querySelector(".tabs");
+            const tabs = tabsContainer.querySelectorAll(".tabs button");
             const newTab = document.createElement("button");
             newTab.innerText = "Onglet " + (tabs.length + 1);
             tabs.appendChild(newTab);
             
             newTab.addEventListener("click", function() {
                 const tabsContainer = document.querySelector(".tabs");
-                const tabs = tabsContainer.querySelectorAll("button");
+                const tabs = tabsContainer.querySelectorAll(".tabs button");
                 Array.from(tabs.childNodes).forEach(function(tab) {
                     tab.setAttribute("data-status", "inactive");
                 });
                 this.setAttribute("data-status", "active");
             });
 
-            Array.from(tabs.childNodes).forEach(function(tab) {
+            Array.from(tabs).forEach(function(tab) {
                 tab.setAttribute("data-status", "inactive");
             });
             newTab.setAttribute("data-status", "active");
@@ -108,7 +109,7 @@
         const removeTabButton = document.getElementById("removeTab");
         removeTabButton.addEventListener("click", function() {
             const tabs = document.querySelectorAll(".tabs button");
-            if (tabs.length === 1) {
+            if (tabs.length < 2) {
                 return;
             }
 
