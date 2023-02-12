@@ -97,16 +97,17 @@
         });
 
         const removeTabButton = document.getElementById("removeTab");
-        removeTabButton.addEventListener("click", function() {
+            removeTabButton.addEventListener("click", function() {
             const tabs = document.querySelectorAll(".tabs button");
             if (tabs.length === 1) {
                 return;
             }
 
             const activeTab = document.querySelector(".tabs button[data-status='active']");
+            const activeTabIndex = Array.from(tabs).indexOf(activeTab);
             activeTab.remove();
 
-            tabs[0].setAttribute("data-status", "active");
+            tabs[activeTabIndex === 0 ? 1 : 0].setAttribute("data-status", "active");
         });
     </script>
 </body>
