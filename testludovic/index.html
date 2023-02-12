@@ -105,13 +105,12 @@
 
             const activeTab = document.querySelector(".tabs button[data-status='active']");
             const activeTabIndex = Array.from(tabs).indexOf(activeTab);
-            activeTab.setAttribute("data-status", "");
             activeTab.remove();
 
-            if (activeTabIndex === 0) {
-                tabs[0].setAttribute("data-status", "active");
-            } else {
+            if (activeTabIndex === tabs.length - 1 && activeTabIndex !== 0) {
                 tabs[activeTabIndex - 1].setAttribute("data-status", "active");
+            } else {
+                tabs[activeTabIndex === 0 ? 0 : activeTabIndex].setAttribute("data-status", "active");
             }
         });
     </script>
