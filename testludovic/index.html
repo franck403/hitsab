@@ -95,11 +95,11 @@
                 tab.setAttribute("data-status", "inactive");
             });
 
-            newTab.addEventListener("click", function(){
+            tabs.childNodes.addEventListener("click", function(){
                 Array.from(tabs).forEach(function(tab) {
                     tab.setAttribute("data-status", "inactive");
                 });
-                newTab.setAttribute("data-status", "active");
+                this.setAttribute("data-status", "active");
             });
             
         });
