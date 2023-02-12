@@ -69,12 +69,13 @@
       </div>
     </nav>
     <script>
-      const tabs = document.querySelectorAll(".tabs button");
-        tabs.forEach(tab => {
-            tab.addEventListener("click", function(){
-                tabs.forEach(t => {
-                    t.setAttribute("data-status", "inactive");
-                });
+
+        const tabs = document.querySelectorAll(".tabs button");
+            tabs.forEach(tab => {
+                tab.addEventListener("click", function(){
+                    tabs.forEach(t => {
+                        t.setAttribute("data-status", "inactive");
+                    });
                 this.setAttribute("data-status", "active");
             });
         });
@@ -88,7 +89,7 @@
 
             // Désélectionner tous les onglets
             Array.from(tabs.childNodes).forEach(function(tab) {
-                tab.setAttribute("data-status", "");
+                tab.setAttribute("data-status", "inactive");
             });
 
             // Sélectionner le nouvel onglet
@@ -112,5 +113,6 @@
                 tabs[activeTabIndex === 0 ? 1 : 0].setAttribute("data-status", "active");
             }
         });
+
     </script>
 </body>
