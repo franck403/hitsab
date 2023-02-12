@@ -88,12 +88,13 @@
             const tabs = document.querySelector(".tabs");
             const newTab = document.createElement("button");
             newTab.innerText = "Onglet " + (tabs.children.length + 1);
-            newTab.setAttribute("data-status", "active");
             tabs.appendChild(newTab);
             
             Array.from(tabs.children).forEach(function(tab) {
                 tab.setAttribute("data-status", "inactive");
 
+            newTab.setAttribute("data-status", "active");
+            
             tab.addEventListener("click", function() {
                 Array.from(tabs.children).forEach(function(tab) {
                         tab.setAttribute("data-status", "inactive");
