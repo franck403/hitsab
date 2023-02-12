@@ -35,7 +35,7 @@
         cursor: pointer;
       }
 
-      .navbar .tabs button[data-status="active"]{
+      [data-status="active"] {
         border-bottom: 2px solid blue;
       }
 
@@ -57,12 +57,12 @@
   </head>
   <body>
     <nav class="navbar">
-      <input type="text" placeholder="Rechercher">
       <div class="tabs">
         <button class="active" data-status="active">Onglet 1</button>
         <button data-status="inactive">Onglet 2</button>
         <button data-status="inactive">Onglet 3</button>
       </div>
+      <input type="text" placeholder="Rechercher">
       <div class="actions">
         <button>X</button>
         <button>+</button>
@@ -74,10 +74,8 @@
         tab.addEventListener("click", function() {
           tabs.forEach(t => {
             t.setAttribute("data-status", "inactive");
-            t.classList.remove("active");
           });
           this.setAttribute("data-status", "active");
-          this.classList.add("active");
         });
       });
     </script>
