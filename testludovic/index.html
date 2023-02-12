@@ -64,7 +64,7 @@
       </div>
       <input type="text" placeholder="Rechercher">
       <div class="actions">
-        <button>+</button>
+        <button id="addTab">+</button>
         <button>X</button>
       </div>
     </nav>
@@ -78,6 +78,15 @@
           this.setAttribute("data-status", "active");
         });
       });
-    </script>
-  </body>
-</html>
+
+      const addTabButton = document.getElementById("addTab");
+      addTabButton.addEventListener("click", function() {
+        const tabsContainer = document.querySelector(".tabs");
+        const newTab = document.createElement("button");
+        newTab.innerHTML = "Nouvel onglet";
+        newTab.setAttribute("data-status", "inactive");
+        tabsContainer.appendChild(newTab);
+        tabs.push(newTab);
+
+        newTab.addEventListener("click", function() {
+          tabs.for
