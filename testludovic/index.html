@@ -1,29 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test ludovic</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <section id="navigation">
-        <section id="sec_tab">
-            <button id="menu"><img src="img/bouton-daccueil.png" alt="accueil"></button>
-        </section>
-        <section id="test_area">
-            <form onkeydown="if(event.key == 'Enter'){search()}">
-                <input type="text" id="text-area" placeholder="Search">
-            </form>
-        </section>
-        <section id="options">
-            <button class="plus">+</button>
-            <button class="close">x</button>
-        </section>
-    </section>
-    <section>
-        <iframe src="accueil.html" frameborder="0"></iframe>
-    </section>
-</body>
+<html>
+  <head>
+    <style>
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        background-color: lightgray;
+        padding: 0 20px;
+      }
+
+      .navbar input {
+        width: 200px;
+        height: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+        border: none;
+        padding: 5px;
+      }
+
+      .navbar .tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar .tabs button {
+        background-color: transparent;
+        border: none;
+        margin: 0 10px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .navbar .tabs button.active {
+        border-bottom: 2px solid blue;
+      }
+
+      .navbar .actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar .actions button {
+        background-color: transparent;
+        border: none;
+        margin: 0 10px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <input type="text" placeholder="Rechercher">
+      <div class="tabs">
+        <button class="active">Onglet 1</button>
+        <button>Onglet 2</button>
+        <button>Onglet 3</button>
+      </div>
+      <div class="actions">
+        <button>X</button>
+        <button>+</button>
+      </div>
+    </nav>
+  </body>
 </html>
