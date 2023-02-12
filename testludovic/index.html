@@ -88,21 +88,20 @@
             const tabs = document.querySelector(".tabs");
             const newTab = document.createElement("button");
             newTab.innerText = "Onglet " + (tabs.childNodes.length + 1);
+            newTab.setAttribute("data-status", "active");
+            tabs.appendChild(newTab);
             
-            // Désélectionner tous les onglets
             Array.from(tabs.childNodes).forEach(function(tab) {
                 tab.setAttribute("data-status", "inactive");
             });
 
-            // Sélectionner le nouvel onglet
-            newTab.setAttribute("data-status", "active");
             newTab.addEventListener("click", function(){
                 Array.from(tabs).forEach(function(tab) {
                     tab.setAttribute("data-status", "inactive");
                 });
                 this.setAttribute("data-status", "active");
             });
-            tabs.appendChild(newTab);
+            
         });
         /*REMOVE TAB*/
         const removeTabButton = document.getElementById("removeTab");
