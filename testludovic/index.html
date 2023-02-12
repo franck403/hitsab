@@ -35,7 +35,7 @@
         cursor: pointer;
       }
 
-      .navbar .tabs button.active {
+      .navbar .tabs button[data-stats="active"]{
         border-bottom: 2px solid blue;
       }
 
@@ -54,14 +54,15 @@
         cursor: pointer;
       }
     </style>
+    <script src="script.js"></script>
   </head>
   <body>
     <nav class="navbar">
       <input type="text" placeholder="Rechercher">
       <div class="tabs">
-        <button class="active">Onglet 1</button>
-        <button>Onglet 2</button>
-        <button>Onglet 3</button>
+        <button id="1" onclick="index(1)" data-status="active">Onglet 1</button>
+        <button id="2" onclick="index(2)" data-status="inactive">Onglet 2</button>
+        <button id="3" onclick="index(3)" data-status="inactive">Onglet 3</button>
       </div>
       <div class="actions">
         <button>X</button>
