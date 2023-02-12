@@ -61,7 +61,7 @@
 <body>
     <nav class="navbar">
       <div class="tabs">
-        <button class="active" data-status="active">Onglet 1</button>
+        <button data-status="active">Onglet 1</button>
         <button data-status="inactive">Onglet 2</button>
         <button data-status="inactive">Onglet 3</button>
       </div>
@@ -87,7 +87,7 @@
         addTabButton.addEventListener("click", function() {
             const tabs = document.querySelector(".tabs");
             const newTab = document.createElement("button");
-            newTab.innerText = "Onglet " + (tabs.childNodes.length + 1);
+            newTab.innerText = "Onglet " + (tabs.children.length + 1);
             newTab.setAttribute("data-status", "active");
             tabs.appendChild(newTab);
             
