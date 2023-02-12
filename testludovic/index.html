@@ -89,7 +89,7 @@
             
             newTab.addEventListener("click", function() {
                 const tabs = document.querySelectorAll(".tabs button");
-                tabs.forEach(tab => {
+                Array.from(tabs.childNodes).forEach(function(tab) {
                     tab.setAttribute("data-status", "inactive");
                 });
                 this.setAttribute("data-status", "active");
