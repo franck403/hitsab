@@ -89,4 +89,9 @@
         tabs.push(newTab);
 
         newTab.addEventListener("click", function() {
-          tabs.for
+            tabs.forEach(t => {
+            t.setAttribute("data-status", "inactive");
+          });
+          this.setAttribute("data-status", "active");
+        });
+      });
