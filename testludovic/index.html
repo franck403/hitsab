@@ -69,7 +69,7 @@
       </div>
     </nav>
     <script>
-
+        /*TAB CLICK*/
         const tabs = document.querySelectorAll(".tabs button");
             tabs.forEach(tab => {
                 tab.addEventListener("click", function(){
@@ -79,7 +79,7 @@
                 this.setAttribute("data-status", "active");
             });
         });
-
+        /*ADD TAB*/
         const addTabButton = document.getElementById("addTab");
         addTabButton.addEventListener("click", function() {
             const tabs = document.querySelector(".tabs");
@@ -100,7 +100,7 @@
             });
             newTab.setAttribute("data-status", "active");
         });
-
+        /*REMOVE TAB*/
         const removeTabButton = document.getElementById("removeTab");
         removeTabButton.addEventListener("click", function() {
             const tabs = document.querySelectorAll(".tabs button");
