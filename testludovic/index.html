@@ -86,6 +86,14 @@
             const newTab = document.createElement("button");
             newTab.innerText = "Onglet " + (tabs.childNodes.length + 1);
             tabs.appendChild(newTab);
+            
+            newTab.addEventListener("click", function() {
+                const tabs = document.querySelectorAll(".tabs button");
+                tabs.forEach(tab => {
+                    tab.setAttribute("data-status", "inactive");
+                });
+                this.setAttribute("data-status", "active");
+            });
 
             // Désélectionner tous les onglets
             Array.from(tabs.childNodes).forEach(function(tab) {
@@ -94,13 +102,6 @@
 
             // Sélectionner le nouvel onglet
             newTab.setAttribute("data-status", "active");
-            newTab.addEventListener("click", function() {
-                const tabs = document.querySelectorAll(".tabs button");
-                tabs.forEach(tab => {
-                tab.setAttribute("data-status", "inactive");
-                });
-                this.setAttribute("data-status", "active");
-            });
         });
 
         const removeTabButton = document.getElementById("removeTab");
