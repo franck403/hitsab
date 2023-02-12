@@ -81,19 +81,18 @@
 
         const addTabButton = document.getElementById("addTab");
         addTabButton.addEventListener("click", function() {
-            const tabsContainer = document.querySelector(".tabs");
+            const tabs = document.querySelector(".tabs");
             const newTab = document.createElement("button");
-            newTab.innerHTML = "Nouvel onglet";
-            newTab.setAttribute("data-status", "inactive");
-            tabsContainer.appendChild(newTab);
+            newTab.innerText = "Onglet " + (tabs.childNodes.length + 1);
+            tabs.appendChild(newTab);
 
-            newTab.addEventListener("click", function() {
-                const tabs = document.querySelectorAll(".tabs button");
-                    tabs.forEach(tab => {
-                        tab.setAttribute("data-status", "inactive");
-                    });
-                    this.setAttribute("data-status", "active");
-                });
+            // Désélectionner tous les onglets
+            Array.from(tabs.childNodes).forEach(function(tab) {
+                tab.setAttribute("data-status", "");
+            });
+
+            // Sélectionner le nouvel onglet
+            newTab.setAttribute("data-status", "active");
         });
 
         const removeTabButton = document.getElementById("removeTab");
