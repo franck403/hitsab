@@ -5,6 +5,9 @@ function proxy_start(){
     if (v == null) {
         console.log("[info] starting the api");
         fetch("options/proxy.js");
+        let ntab = document.createElement('script');
+        document.getElementById('head').appendChild(ntab);
+        ntab.setAttribute("src", "/options/proxy.js");;
         console.log("[info] api is started")
         localStorage.setItem("proxy", "on");
     } 
