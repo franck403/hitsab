@@ -52,7 +52,11 @@ function search(id) {
     iframe.setAttribute("scrolling", "yes")
     iframe.setAttribute("frameborder", "0")
     iframe.setAttribute("allowfullscreen", "True")
-    iframe.setAttribute("src",nurl)
+    if (parseFloat(localStorage.getItem("proxy")) == 'on') {
+        iframe.setAttribute("src","https://proxy6.francoischouin1.repl.co/?url=" + nurl)
+    } else{
+        iframe.setAttribute("src",nurl)
+    }
     var other = document.getElementsByTagName('iframe')["new_tab_" + id];
     try { 
         setCookie("actab", "new_tab_" + id);
