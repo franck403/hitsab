@@ -3,6 +3,9 @@
 <html>
 <head>
     <style>
+    body {
+        margin: 0px;
+    }
     .parent {
         display: grid;
         grid-template-columns: repeat(9, 1fr);
@@ -21,15 +24,9 @@
         height: 50px;
         width: 100%;
         background-color: lightgray;
-        position: absolute;
-        top: 0;
-        left: 0;
       }
 
       .navbar input {
-        width: 200px;
-        height: 20px;
-        margin-right: 20px;
         border-radius: 10px;
         border: none;
         padding: 5px;
@@ -38,6 +35,8 @@
       .navbar .tabs {
         justify-content: center;
         align-items: center;
+        height: 50px;
+        overflow: scroll;
       }
 
       .navbar .tabs button {
