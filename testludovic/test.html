@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        }
+        
+        .div1 { grid-area: 1 / 9 / 2 / 10; }
+        .div2 { grid-area: 1 / 1 / 2 / 6; }
+        .div3 { grid-area: 1 / 6 / 2 / 9; }
+        .div4 { grid-area: 2 / 1 / 6 / 10; }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        width: 100%;
+        background-color: lightgray;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .navbar input {
+        width: 200px;
+        height: 20px;
+        margin-right: 20px;
+        border-radius: 10px;
+        border: none;
+        padding: 5px;
+      }
+
+      .navbar .tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar .tabs button {
+        background-color: transparent;
+        border: none;
+        margin: 0 10px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      .navbar .tabs button[data-status="active"] {
+        border-bottom: 2px solid blue;
+      }
+
+      .navbar .actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .navbar .actions button {
+        background-color: transparent;
+        border: none;
+        margin: 0 10px;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="parent navbar">
+            <div class="div1 tabs"> 
+                <button data-status="active">Onglet 1</button>
+                <button data-status="inactive">Onglet 2</button>
+                <button data-status="inactive">Onglet 3</button>
+            </div>
+            <div class="div2">
+                <input type="text" placeholder="Rechercher">
+            </div>
+            <div class="div3 actions"> 
+                <button id="addTab">+</button>
+                <button id="removeTab">X</button>
+            </div>
+            <div class="div4"> </div>
+        </div>
+    </nav>
+    <script>
+        /*TAB CLICK*/
+        const tabs = document.querySelectorAll(".tabs button");
+        Array.from(tabs).forEach(tab => {
+            tab.addEventListener("click", function(){
+                Array.from(tabs).forEach(function(tab) {
+                    tab.setAttribute("data-status", "inactive");
+                });
+                this.setAttribute("data-status", "active");
+            });
+        });
+        /*ADD TAB*/
+        const addTabButton = document.getElementById("addTab");
+        addTabButton.addEventListener("click", function() {
+            const tabs = document.querySelector(".tabs");
+            const newTab = document.createElement("button");
+            newTab.innerText = "Onglet " + (tabs.children.length + 1);
+            tabs.appendChild(newTab);
+            
+            Array.from(tabs.children).forEach(function(tab) {
+                tab.setAttribute("data-status", "inactive");
+
+            newTab.setAttribute("data-status", "active");
+
+            tab.addEventListener("click", function() {
+                Array.from(tabs.children).forEach(function(tab) {
+                        tab.setAttribute("data-status", "inactive");
+                    });
+                    this.setAttribute("data-status", "active");
+                });
+            });
+        });
+        /*REMOVE TAB*/
+        const removeTabButton = document.getElementById("removeTab");
+        removeTabButton.addEventListener("click", function() {
+            const tabs = document.querySelectorAll(".tabs button");
+            if (tabs.length < 2) {
+                return;
+            }
+
+            const activeTab = document.querySelector(".tabs button[data-status='active']");
+            const activeTabIndex = Array.from(tabs).indexOf(activeTab);
+            activeTab.remove();
+
+            if (activeTabIndex === tabs.length - 1 && activeTabIndex !== 0) {
+                tabs[activeTabIndex - 1].setAttribute("data-status", "active");
+            } else {
+                tabs[activeTabIndex === 0 ? 1 : 0].setAttribute("data-status", "active");
+            }
+        });
+
+    </script>
+</body>
