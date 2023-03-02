@@ -55,7 +55,8 @@ body {margin-top:0px;margin-left:0px}
 .active{
     display:table-cell;
     border-color:white;
-    max-width:53px;
+    max-width: 60px;
+    min-width: 53px;
     height:20px;
     border-top-right-radius: 10px 10px;
     border-top-left-radius: 10px 10px;
