@@ -2,8 +2,8 @@ body {margin-top:0px;margin-left:0px}
 .hide {
     display:table-cell;
     border-color:white;
-    max-width:53px;
-    min-width: 50px;
+    max-width: 60px;
+    min-width: 53px;
     height:20px;
     border-top-right-radius: 10px 10px;
     border-top-left-radius: 10px 10px;
@@ -68,7 +68,7 @@ body {margin-top:0px;margin-left:0px}
 .reseach {
     font-size: 30px;
     position: fixed;
-    top: 0px;
+    top: 8px;
     background: none;
     border: none;
     width: 113.5vw;
