@@ -195,6 +195,7 @@ function fresh() {
             localStorage.setItem("tab", ctab)
         }
         document.getElementById(30).remove();
+        document.getElementById("div_30").remove();
         localStorage.setItem("tab", stab);
         end();
     }
