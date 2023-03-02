@@ -16,7 +16,9 @@ body {margin-top:0px;margin-left:0px}
     Visibility:show;
 }
 #up {
-    width:98vw;
+    width: 100vw;
+    height: 40px;
+    background: black;
 }
 .plus {
     font-size: 30px;
