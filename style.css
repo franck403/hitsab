@@ -3,6 +3,7 @@ body {margin-top:0px;margin-left:0px}
     display:table-cell;
     border-color:white;
     max-width:53px;
+    min-width: 50px;
     height:20px;
     border-top-right-radius: 10px 10px;
     border-top-left-radius: 10px 10px;
@@ -49,6 +50,7 @@ body {margin-top:0px;margin-left:0px}
     background:black;
     width:95.5vw;
     height:20px;
+    overflow:auto;
 }
 .active{
     display:table-cell;
@@ -64,16 +66,12 @@ body {margin-top:0px;margin-left:0px}
     font-size: 15px;
 }
 .reseach {
-font-size: 30px;
-    float: left;
+    font-size: 30px;
     position: fixed;
-    top: -8px;
-    right: 0px;
+    top: 0px;
     background: none;
     border: none;
-    height: 28px;
-    color: white;
-    width: 4.5vw;
+    width: 113.5vw;
 }
 .window {
     display:block;
@@ -104,11 +102,12 @@ font-size: 30px;
     border-radius: calc(0.5 * 44px);
     font-size: 16px;
     outline: none;
-    padding-inline-end: 40px;
-    padding-inline-start: 20px;
+    padding-inline-end: 9px;
+    padding-inline-start: 9px;
     position: relative;
     width: 80%;
-    height: 44px;
+
+    height: 18px;
 }
 
 /* search bar V2 end */
