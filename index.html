@@ -25,6 +25,13 @@
                 <button onclick="ltab()" class="plus">+</button>
                 <button id="close" class="close">x</button>
             </section>
+            <section class="reseach">                   
+                <forum id="input" onkeydown="if(event.key == 'Enter'){searchV2()}">
+                    <input id="inputb" placeholder="Search">
+                    <input id="inputimg" onclick="searchV2()" type="image" alt="search" value="Login" src="search.svg" height="24" width="24">
+                    <input type="submit" style="display: none;">
+                </forum>
+            </section>
         </section>
         <section class="window">
             <section id="navigator">

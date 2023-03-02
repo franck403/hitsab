@@ -63,6 +63,19 @@ body {margin-top:0px;margin-left:0px}
     text-align: center;
     font-size: 15px;
 }
+.reseach {
+font-size: 30px;
+    float: left;
+    position: fixed;
+    top: -8px;
+    right: 0px;
+    background: none;
+    border: none;
+    height: 28px;
+    color: white;
+    background: black;
+    width: 4.5vw;
+}
 .window {
     display:block;
     color:white;
