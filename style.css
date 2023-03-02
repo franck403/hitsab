@@ -73,7 +73,6 @@ font-size: 30px;
     border: none;
     height: 28px;
     color: white;
-    background: black;
     width: 4.5vw;
 }
 .window {
@@ -91,6 +90,29 @@ font-size: 30px;
 #navigator iframe{
     border:none;
 }
+/* search bar V2 */
+#inputs {
+    border: none;
+    border-radius: calc(0.5 * 44px);
+    font-size: 16px;
+    outline: none;
+    position: relative;
+}
+
+#inputbs {
+    border: none;
+    border-radius: calc(0.5 * 44px);
+    font-size: 16px;
+    outline: none;
+    padding-inline-end: 40px;
+    padding-inline-start: 20px;
+    position: relative;
+    width: 80%;
+    height: 44px;
+}
+
+/* search bar V2 end */
+
 /* search bar */
 #input {
     border: none;
