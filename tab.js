@@ -61,8 +61,10 @@ function tab0(id){
     if (url == null) {
         const mods1 = document.getElementById('input');
         const mods2 = document.getElementById('inputimg');
+        const mods3 = document.getElementById('inputs');
         mods2.setAttribute("onclick","search(" + id + ")")
         mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + id + ")}")
+        mods3.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + id + ")}")
     } else {
         var iframe = document.createElement('iframe');
         document.getElementById("navigator").appendChild(iframe);
@@ -200,8 +202,10 @@ function fresh() {
 
 const mods1 = document.getElementById('input');
 const mods2 = document.getElementById('inputimg');
+const mods3 = document.getElementById('inputs');
 mods2.setAttribute("onclick","search(" + 1 + ")")
 mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 1 + ")}")
+mods3.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 1 + ")}")
 setCookie("actabn",1)
 
 fresh()

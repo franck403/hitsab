@@ -27,7 +27,7 @@ function iframe_check(id) {
 
 function search(id) {
     var moteur = "https://www.google.com/search?q="
-    var url = document.getElementById("inputb").value;
+    var url = document.getElementById("inputbs").value;
     console.log(urlify(url))
     if (urlify(url) == -1) {
         var nurl = moteur + url + "&igu=1"
@@ -78,7 +78,7 @@ function search(id) {
 }
 function searchV2(id) {
     var moteur = "https://www.google.com/search?q="
-    var url = document.getElementById("inputb").value;
+    var url = document.getElementById("inputbs").value;
     console.log(urlify(url))
     if (urlify(url) == -1) {
         var nurl = moteur + url + "&igu=1"
@@ -125,5 +125,5 @@ function searchV2(id) {
     catch {
         console.log("[no active tab]")
     }
-    document.getElementById("inputb").value = "";
+    document.getElementById("inputbs").value = "";
 }
