@@ -12,6 +12,22 @@
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	      <script src="https://unpkg.com/@ungap/custom-elements-builtin"></script>
         <script type="module" src="https://unpkg.com/x-frame-bypass@1.0.2/x-frame-bypass.js"></script>
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-analytics.js";
+            const firebaseConfig = {
+              apiKey: "AIzaSyD9po7l-vwO0VrY1rMYDFTYNlEBv54T6do",
+              authDomain: "ic-hat.firebaseapp.com",
+              databaseURL: "https://ic-hat-default-rtdb.firebaseio.com",
+              projectId: "ic-hat",
+              storageBucket: "ic-hat.appspot.com",
+              messagingSenderId: "720687529085",
+              appId: "1:720687529085:web:d3a7a4d37034cc25058514",
+              measurementId: "G-2ZCFL6QFXD"
+            };
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
     </head>
     <body>
         <img id="loading" src="loading.gif"></img>
