@@ -52,7 +52,6 @@ function search(id) {
     iframe.setAttribute("scrolling", "yes")
     iframe.setAttribute("frameborder", "0")
     iframe.setAttribute("allowfullscreen", "True")
-    iframe.setAttribute("is", "x-frame-bypass")
     if (parseFloat(localStorage.getItem("proxy")) == 'on') {
         iframe.setAttribute("src","https://proxy6.francoischouin1.repl.co/?url=" + nurl)
     } else{
@@ -103,7 +102,6 @@ function searchV2(id) {
     iframe.setAttribute("scrolling", "yes")
     iframe.setAttribute("frameborder", "0")
     iframe.setAttribute("allowfullscreen", "True")
-    iframe.setAttribute("is", "x-frame-bypass")
     if (parseFloat(localStorage.getItem("proxy")) == 'on') {
         iframe.setAttribute("src","https://proxy6.francoischouin1.repl.co/?url=" + nurl)
     } else{
