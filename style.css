@@ -72,7 +72,7 @@ body {margin-top:0px;margin-left:0px}
 }
 .reseach_bar {
     position: fixed;
-    top: 25px;
+    top: 24px;
     background: none;
     border: none;
     width: 113.5vw;
@@ -108,9 +108,10 @@ body {margin-top:0px;margin-left:0px}
     outline: none;
     padding-inline-end: 9px;
     padding-inline-start: 9px;
-    position: relative;
-    width:86%;
-    height: 18px;
+    position: fixed;
+    width: 86%;
+    height: 20px;
+    right: 3px;
 }
 
 /* search bar V2 end */
