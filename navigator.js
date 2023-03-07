@@ -52,7 +52,7 @@ function search(id) {
     iframe.setAttribute("scrolling", "yes")
     iframe.setAttribute("frameborder", "0")
     iframe.setAttribute("allowfullscreen", "True")
-    if (parseFloat(localStorage.getItem("proxy")) == 'on') {
+    if (localStorage.getItem("proxy") == 'on') {
         iframe.setAttribute("src","https://proxy6.francoischouin1.repl.co/?url=" + nurl)
     } else{
         iframe.setAttribute("src",nurl)
@@ -102,7 +102,7 @@ function searchV2(id) {
     iframe.setAttribute("scrolling", "yes")
     iframe.setAttribute("frameborder", "0")
     iframe.setAttribute("allowfullscreen", "True")
-    if (parseFloat(localStorage.getItem("proxy")) == 'on') {
+    if (localStorage.getItem("proxy") == 'on') {
         iframe.setAttribute("src","https://proxy6.francoischouin1.repl.co/?url=" + nurl)
     } else{
         iframe.setAttribute("src",nurl)
@@ -112,13 +112,6 @@ function searchV2(id) {
         setCookie("actab", "new_tab_" + id);
         setCookie("actabn",id)
         other.setAttribute("style","visibility: visible;");
-        var test = iframe_check(id);
-        if (test == "error") {
-            tester.document.getElementById("new_tab_" + id);
-            tester.remove();
-            elerror.document.getElementById("iframe_error");
-            elerror.test('The page does not accept iframe on this website');
-        }
     }
     catch {
         console.log("[no active tab]")
