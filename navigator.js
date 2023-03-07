@@ -27,7 +27,7 @@ function iframe_check(id) {
 
 function search(id) {
     var moteur = "https://www.google.com/search?q="
-    var url = document.getElementById("inputbs").value;
+    var url = document.getElementById("inputb").value;
     console.log(urlify(url))
     if (urlify(url) == -1) {
         var nurl = moteur + url + "&igu=1"
