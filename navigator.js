@@ -53,7 +53,7 @@ function search(id) {
     iframe.setAttribute("frameborder", "0")
     iframe.setAttribute("allowfullscreen", "True")
     if (localStorage.getItem("proxy") == 'on') {
-        iframe.setAttribute("src","https://proxy6.francoischouin1.repl.co/?url=" + nurl)
+        iframe.setAttribute("src","https://webproxy.francoischouin1.repl.co/proxy/web/geoloup/team/hitsab/" + nurl)
     } else{
         iframe.setAttribute("src",nurl)
     }
@@ -103,7 +103,7 @@ function searchV2(id) {
     iframe.setAttribute("frameborder", "0")
     iframe.setAttribute("allowfullscreen", "True")
     if (localStorage.getItem("proxy") == 'on') {
-        iframe.setAttribute("src","https://proxy6.francoischouin1.repl.co/?url=" + nurl)
+        iframe.setAttribute("src","https://webproxy.francoischouin1.repl.co/proxy/web/geoloup/team/hitsab/" + nurl)
     } else{
         iframe.setAttribute("src",nurl)
     }
