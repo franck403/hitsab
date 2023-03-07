@@ -119,4 +119,6 @@ function searchV2(id) {
         console.log("[no active tab]")
     }
     document.getElementById("inputbs").value = "";
+    const iname = iframe.contentWindow.document.title;
+    document.getElementById(id).textContent = iname;
 }
