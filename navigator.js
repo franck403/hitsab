@@ -74,6 +74,8 @@ function search(id) {
         console.log("[no active tab]")
     }
     document.getElementById("inputb").value = "";
+    const iname = iframe.contentWindow.document.title;
+    document.getElementById(id).textContent = iname;
 }
 function searchV2(id) {
     var moteur = "https://www.google.com/search?q="
