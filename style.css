@@ -139,7 +139,7 @@ body {margin-top:0px;margin-left:0px}
 #inputimg {
     position: absolute;
     right: 0;
-    top: -2px;
+    top: -2.5px;
     bottom: 0;
     display: flex;
     align-self: center;
