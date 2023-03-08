@@ -29,7 +29,7 @@ if (keys != null) {
     var logged = true
 }
 else {
-    localStorage.setItem("tab", 2);
+    localStorage.setItem("tab", 1);
     var key = Math.random();
     console.log("generating computer key");
     localStorage.setItem("computerid", key);
@@ -43,9 +43,9 @@ if (keyid != null) {
     console.log("session load")
 }
 else {
-    localStorage.setItem("tab", 2);
+    localStorage.setItem("tab", 1);
     var session = Math.random();
-    console.log("generating session keys");
+    console.log("generating session key");
     sessionStorage.setItem("session", session);
 }
 
