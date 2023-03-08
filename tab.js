@@ -213,6 +213,11 @@ function fresh() {
     }
 }
 
+// function for refresh the iframe
+function refresh_tab(id) {
+    document.getElementById('new_tab_' + id).contentWindow.location.reload();
+}
+
 const mods1 = document.getElementById('input');
 const mods2 = document.getElementById('inputimg');
 const mods3 = document.getElementById('inputs');
