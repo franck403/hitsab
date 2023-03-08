@@ -74,6 +74,7 @@ function search(id) {
         console.log("[no active tab]")
     }
     document.getElementById("inputb").value = "";
+    var iframe = document.getElementById("vew_tab_" + id)
     const iname = iframe.contentWindow.document.title;
     document.getElementById(id).textContent = iname;
 }
@@ -119,6 +120,7 @@ function searchV2(id) {
         console.log("[no active tab]")
     }
     document.getElementById("inpuVt2").value = "";
+    var iframe = document.getElementById("vew_tab_" + id)
     const iname = iframe.contentWindow.document.title;
     document.getElementById(id).textContent = iname;
 }
