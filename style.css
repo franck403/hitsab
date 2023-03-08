@@ -45,8 +45,8 @@ body {margin-top:0px;margin-left:0px}
     width:4.5vw;
 }
 #tab::-webkit-scrollbar {
-    height: 4px;              /* height of horizontal scrollbar ← You're missing this */
-    width: 4px;               /* width of vertical scrollbar */
+    height: 0px;              /* height of horizontal scrollbar ← You're missing this */
+    width: 0px;               /* width of vertical scrollbar */
     border: 1px solid #d5d5d5;
   }
 #tab {
