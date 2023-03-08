@@ -1,6 +1,6 @@
 body {margin-top:0px;margin-left:0px}
 .hide {
-    display:table-cell;
+    display:inline-flex;
     border-color:white;
     height:20px;
     border-top-right-radius: 10px 10px;
