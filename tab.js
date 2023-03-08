@@ -18,9 +18,9 @@ var logged = false
 var restlist = ['actab','tab','actabn','actabm','proxy']
 var rest = {
     'actab' : 'new_tab_1',
-    'tab' : 1,
-    'actabn' : 1,
-    'actabm' :	1,
+    'tab' : 0,
+    'actabn' : 0,
+    'actabm' :	0,
     'proxy' : 'off'
 }
 
@@ -29,7 +29,7 @@ if (keys != null) {
     var logged = true
 }
 else {
-    localStorage.setItem("tab", 1);
+    localStorage.setItem("tab", 0);
     var key = Math.random();
     console.log("generating computer key");
     localStorage.setItem("computerid", key);
@@ -43,7 +43,7 @@ if (keyid != null) {
     console.log("session load")
 }
 else {
-    localStorage.setItem("tab", 1);
+    localStorage.setItem("tab", 0);
     var session = Math.random();
     console.log("generating session key");
     sessionStorage.setItem("session", session);
@@ -176,7 +176,7 @@ function ltab() {
             }
         }
         else {
-            localStorage.setItem("tab", 2);
+            localStorage.setItem("tab", 0);
         }
     } else {
         console.log("[info] Web sotrage disable")
