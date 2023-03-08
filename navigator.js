@@ -79,7 +79,7 @@ function search(id) {
 }
 function searchV2(id) {
     var moteur = "https://www.google.com/search?q="
-    var url = document.getElementById("inputbs").value;
+    var url = document.getElementById("inpuVt2").value;
     console.log(urlify(url))
     if (urlify(url) == -1) {
         var nurl = moteur + url + "&igu=1"
@@ -118,7 +118,7 @@ function searchV2(id) {
     catch {
         console.log("[no active tab]")
     }
-    document.getElementById("inputbs").value = "";
+    document.getElementById("inpuVt2").value = "";
     const iname = iframe.contentWindow.document.title;
     document.getElementById(id).textContent = iname;
 }
