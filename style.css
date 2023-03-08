@@ -48,7 +48,8 @@ body {margin-top:0px;margin-left:0px}
     background:black;
     width:95.5vw;
     height:20px;
-    overflow:auto;
+    overflow: auto;
+    white-space: nowrap;
 }
 .active{
     display:table-cell;
