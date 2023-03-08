@@ -15,6 +15,7 @@ console.log("-----------------------------");
 var keys = localStorage.getItem("computerid");
 var keyid = sessionStorage.getItem("session");
 var logged = false
+var restlist = ['actab','tab','actabn','actabm','proxy']
 var rest = {
     'actab' : 'new_tab_1',
     'tab' : 1,
@@ -32,6 +33,10 @@ else {
     var key = Math.random();
     console.log("generating computer key");
     localStorage.setItem("computerid", key);
+    restlist.forEach(to_rest => {
+        var gc = rest[to_rest]
+        localStorage.setItem(to_rest, gc);
+    });
 }
 
 if (keyid != null) {
