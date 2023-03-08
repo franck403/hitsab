@@ -15,6 +15,13 @@ console.log("-----------------------------");
 var keys = localStorage.getItem("computerid");
 var keyid = sessionStorage.getItem("session");
 var logged = false
+var rest = {
+    'actab' : 'new_tab_1',
+    'tab' : 1,
+    'actabn' : 1,
+    'actabm' :	1,
+    'proxy' : 'off'
+}
 
 if (keys != null) {
     console.log("computer logged")
