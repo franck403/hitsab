@@ -74,6 +74,8 @@ function tab0(id){
         const mods1 = document.getElementById('input');
         const mods2 = document.getElementById('inputimg');
         const mods3 = document.getElementById('inputs');
+        const mods4 = document.getElementById('refresh');
+        mods4.setAttribute("onclick","refresh(" + id + ")")
         mods2.setAttribute("onclick","search(" + id + ")")
         mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + id + ")}")
         mods3.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + id + ")}")
