@@ -14,6 +14,7 @@ console.log("-----------------------------");
 
 var keys = localStorage.getItem("computerid");
 var keyid = sessionStorage.getItem("session");
+var ioinefe = localStorage.setItem("tab_log_data", "");
 var logged = false
 var restlist = ['actab','tab','actabn','actabm','proxy']
 var rest = {
@@ -65,7 +66,7 @@ function end() {
 function old_new_log(id,act,sact="nothing") {
     if (act == "get") {
         // exemple of the look in localStorage
-        // 1>new-tab<old-tab*2>new-tab<old-tab
+        // 1>new-tab{<old-tab{*2>new-tab{<old-tab{
         const old = localStorage.getItem("tab_log_data");
         const main = old.split("*")
         var id_tab = []
@@ -78,7 +79,17 @@ function old_new_log(id,act,sact="nothing") {
         });
         return malin[sact]
     } else if(act == "collect") {
-
+        // sact ex : [id,[[new],[old]]]
+        const old = localStorage.getItem("tab_log_data");
+        const main = old.split("*")
+        var id_tab = []
+        var malin = []
+        main.forEach((element) => {
+            var to_split = element.split(">")
+            if (to_split[0] == id) {
+            var malin = to_split.split("<")
+            } else {}
+        });
     } else{}
 
 }
@@ -110,7 +121,6 @@ function tab0(id){
         mods2.setAttribute("onclick","search(" + id + ")")
         mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + id + ")}")
         mods3.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + id + ")}")
-        old_new_log(id,"collect")
     } else {
         var iframe = document.createElement('iframe');
         document.getElementById("navigator").appendChild(iframe);
