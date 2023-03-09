@@ -5,8 +5,6 @@ function proxy_start(){
     if (v == "off") {
         console.log("[info] starting the api");
         fetch("options/proxy.js");
-        let ntab = document.createElement('script');
-        document.getElementById('head').appendChild(ntab);
         console.log("[info] api is started")
         localStorage.setItem("proxy", "on");
         document.getElementById('pros').setAttribute("class","menu-item menu-active");
