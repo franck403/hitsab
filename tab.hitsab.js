@@ -79,7 +79,13 @@ function old_new_log(id,act,sact="nothing") {
         });
         return malin[sact]
     } else if(act == "collect") {
-        // sact ex : [id,[[new],[old]]]
+        // sact exemple : [id,[[new,new,etc],[old,old,etc]]]
+        // prepare the data part 1
+        var m = sact[0]
+        var m1 = sact[1]
+        var m2 = m1[1]
+        var m3 = m1[2]
+        // prepare the data part 2
         const old = localStorage.getItem("tab_log_data");
         const main = old.split("*")
         var id_tab = []
