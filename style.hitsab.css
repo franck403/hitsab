@@ -248,4 +248,8 @@ body {margin-top:0px;margin-left:0px}
     padding: 0 10px;
     margin: 5px 0;
 }
+
+.menu-active {
+    background-color: #d3d3d3;
+}
 /* right click menu end */

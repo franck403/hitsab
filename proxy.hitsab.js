@@ -1,5 +1,5 @@
 // proxy controler
-
+// id for proxy content id="pros" and id="proe"
 function proxy_start(){
     var v = localStorage.getItem("proxy");
     if (v == null) {
@@ -7,9 +7,10 @@ function proxy_start(){
         fetch("options/proxy.js");
         let ntab = document.createElement('script');
         document.getElementById('head').appendChild(ntab);
-        ntab.setAttribute("src", "/options/proxy.js");;
         console.log("[info] api is started")
         localStorage.setItem("proxy", "on");
+        document.getElementById('pros').setAttribute("class","menu-item menu-active");
+        document.getElementById('proe').setAttribute("class","menu-item");
     } 
 }
 
@@ -19,6 +20,8 @@ function proxy_end(){
     else {
         console.log("[info] stoping the proxy");
         localStorage.removeItem("proxy");
+        document.getElementById('proe').setAttribute("class","menu-item menu-active");
+        document.getElementById('pros').setAttribute("class","menu-item");
         console.log("[info] proxy stopped");
     }
 }
