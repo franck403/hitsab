@@ -71,10 +71,15 @@ function tab0(id){
 
     url = getCookie("new_tab_" + id);
     if (url == null) {
+        // change all the search bar
         const mods1 = document.getElementById('input');
         const mods2 = document.getElementById('inputimg');
         const mods3 = document.getElementById('inputs');
         const mods4 = document.getElementById('refresh');
+        const mods5 = document.getElementById('old');
+        const mods6 = document.getElementById('new'); 
+        mods5.setAttribute("onclick","old(" + id + ")")
+        mods6.setAttribute("onclick","new(" + id + ")")
         mods4.setAttribute("onclick","refresh(" + id + ")")
         mods2.setAttribute("onclick","search(" + id + ")")
         mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + id + ")}")
