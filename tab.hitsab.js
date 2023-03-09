@@ -62,27 +62,32 @@ function end() {
         element.classList.add('tab');
     });
 }
-function old_new_log(id,act) {
+function old_new_log(id,act,sact="nothing") {
     if (act == "get") {
         // exemple of the look in localStorage
-        // 1_new-tab;old-tab,2_old;new-tab;old-tab
+        // 1>new-tab<old-tab*2>new-tab<old-tab
         const old = localStorage.getItem("tab_log_data");
-        const main = old.split(",")
+        const main = old.split("*")
         var id_tab = []
         var malin = []
         main.forEach((element) => {
-            var to_split = element.split("_")
+            var to_split = element.split(">")
             if (to_split[0] == id) {
-            var malin = to_split.split(";")
+            var malin = to_split.split("<")
             } else {}
         });
+        return malin[sact]
     } else if(act == "collect") {
 
     } else{}
 
 }
-function snew(id) {}
-function old(id) {}
+function snew(id) {
+    old_new_log(id,"get","new")
+}
+function old(id) {
+    old_new_log(id,"get","old")
+}
 
 function tab0(id){
     const mods3 = document.getElementById("div_" + id);
