@@ -53,7 +53,7 @@ function search(id) {
     iframe.setAttribute("frameborder", "0")
     iframe.setAttribute("allowfullscreen", "True")
     if (localStorage.getItem("proxy") == 'on') {
-        iframe.setAttribute("src","https://HitsabEnvSystems.francoischouin1.repl.co/fetch/" + nurl)
+        iframe.setAttribute("src","https://HitsabEnvSystems.francoischouin1.repl.co/fetch/" + nurl.replace("https://",""))
     } else{
         iframe.setAttribute("src",nurl)
     }
@@ -106,7 +106,7 @@ function searchV2(id) {
     iframe.setAttribute("frameborder", "0")
     iframe.setAttribute("allowfullscreen", "True")
     if (localStorage.getItem("proxy") == 'on') {
-        iframe.setAttribute("src","https://HitsabEnvSystems.francoischouin1.repl.co/fetch/" + nurl)
+        iframe.setAttribute("src","https://HitsabEnvSystems.francoischouin1.repl.co/fetch/" + nurl.replace("https://",""))
     } else{
         iframe.setAttribute("src",nurl)
     }
