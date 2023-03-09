@@ -21,7 +21,7 @@ var rest = {
     'tab' : 0,
     'actabn' : 0,
     'actabm' :	0,
-    'proxy' : 'off'
+    'proxy' : 'on'
 }
 
 if (keys != null) {
