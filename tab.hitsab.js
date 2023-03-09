@@ -62,6 +62,27 @@ function end() {
         element.classList.add('tab');
     });
 }
+function old_new_log(id,act) {
+    if (act == "get") {
+        // exemple of the look in localStorage
+        // 1_new-tab;old-tab,2_old;new-tab;old-tab
+        const old = localStorage.getItem("tab_log_data");
+        const main = old.split(",")
+        var id_tab = []
+        var malin = []
+        main.forEach((element) => {
+            var to_split = element.split("_")
+            if (to_split[0] == id) {
+            var malin = to_split.split(";")
+            } else {}
+        });
+    } else if(act == "collect") {
+
+    } else{}
+
+}
+function snew(id) {}
+function old(id) {}
 
 function tab0(id){
     const mods3 = document.getElementById("div_" + id);
@@ -79,11 +100,12 @@ function tab0(id){
         const mods5 = document.getElementById('old');
         const mods6 = document.getElementById('new'); 
         mods5.setAttribute("onclick","old(" + id + ")")
-        mods6.setAttribute("onclick","new(" + id + ")")
+        mods6.setAttribute("onclick","snew(" + id + ")")
         mods4.setAttribute("onclick","refresh(" + id + ")")
         mods2.setAttribute("onclick","search(" + id + ")")
         mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + id + ")}")
         mods3.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + id + ")}")
+        old_new_log(id,"collect")
     } else {
         var iframe = document.createElement('iframe');
         document.getElementById("navigator").appendChild(iframe);
