@@ -105,7 +105,10 @@ body {margin-top:0px;margin-left:0px}
     border-radius: calc(0.5 * 44px);
     font-size: 16px;
     outline: none;
-    height: 1px;
+}
+#refresh {
+    position: fixed;
+    right: 88.5%;
 }
 
 #inpuVt2 {
