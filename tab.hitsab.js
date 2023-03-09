@@ -216,7 +216,7 @@ function fresh() {
 }
 
 // function for refresh the iframe
-function refresh_tab(id) {
+function refresh(id) {
     document.getElementById('new_tab_' + id).contentWindow.location.reload();
 }
 
