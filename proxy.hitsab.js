@@ -17,7 +17,7 @@ function proxy_end(){
     if (v == "off") {}
     else {
         console.log("[info] stoping the proxy");
-        localStorage.removeItem("proxy");
+        localStorage.setItem("proxy","off");
         document.getElementById('proe').setAttribute("class","menu-item menu-active");
         document.getElementById('pros').setAttribute("class","menu-item");
         console.log("[info] proxy stopped");
@@ -25,7 +25,7 @@ function proxy_end(){
 }
 
 var prv = localStorage.getItem("proxy");
-if (prv == null) {
+if (prv == "on") {
     document.getElementById('pros').setAttribute("class","menu-item menu-active");
     document.getElementById('proe').setAttribute("class","menu-item");
 }
