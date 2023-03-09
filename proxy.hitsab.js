@@ -25,3 +25,13 @@ function proxy_end(){
         console.log("[info] proxy stopped");
     }
 }
+
+var prv = localStorage.getItem("proxy");
+if (prv == null) {
+    document.getElementById('pros').setAttribute("class","menu-item menu-active");
+    document.getElementById('proe').setAttribute("class","menu-item");
+}
+else {
+    document.getElementById('proe').setAttribute("class","menu-item menu-active");
+    document.getElementById('pros').setAttribute("class","menu-item");
+}
