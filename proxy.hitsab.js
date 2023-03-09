@@ -2,7 +2,7 @@
 // id for proxy content id="pros" and id="proe"
 function proxy_start(){
     var v = localStorage.getItem("proxy");
-    if (v == null) {
+    if (v == "off") {
         console.log("[info] starting the api");
         fetch("options/proxy.js");
         let ntab = document.createElement('script');
@@ -16,7 +16,7 @@ function proxy_start(){
 
 function proxy_end(){
     var v = localStorage.getItem("proxy");
-    if (v == null) {}
+    if (v == "off") {}
     else {
         console.log("[info] stoping the proxy");
         localStorage.removeItem("proxy");
