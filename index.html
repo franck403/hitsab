@@ -25,7 +25,7 @@
                 <button id="close" class="close">x</button>
             </section>
             <section class="reseach">                   
-                <forum id="inputs" class="reseach_bar" onkeydown="if(event.key == 'Enter'){searchV2()}">
+                <forum id="inputs" class="reseach_bar" onkeydown="if(event.key == 'Enter'){searchV2(0)}">
                     <input id="inpuVt2" placeholder="Search">
                     <input id="old" onclick="old(0)" type="image" alt="refresh" value="Login" src="old.svg" height="24" width="24">
                     <input id="new" onclick="snew(0)" type="image" alt="refresh" value="Login" src="old.svg" height="24" width="24">
@@ -38,9 +38,9 @@
             <section id="navigator">
                 <section style="padding: 35vh 0;margin:auto;" id="home">
                     <H1 id="iframe_error"></H1>
-                    <forum id="input" onkeydown="if(event.key == 'Enter'){search()}">
+                    <forum id="input" onkeydown="if(event.key == 'Enter'){search(0)}">
                         <input id="inputb" placeholder="Search">
-                        <input id="inputimg" onclick="search()" type="image" alt="search" value="Login" src="search.svg" height="24" width="24">
+                        <input id="inputimg" onclick="search(0)" type="image" alt="search" value="Login" src="search.svg" height="24" width="24">
                         <input type="submit" style="display: none;">
                     </forum>
                     <script src="navigator.hitsab.js"></script>
