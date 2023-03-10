@@ -119,7 +119,7 @@ body {margin-top:0px;margin-left:0px}
     grid-row-gap: 0px;
 }
 #old { grid-area: 1 / 1 / 2 / 2; }
-#new { grid-area: 1 / 2 / 2 / 3; }
+#new { grid-area: 1 / 2 / 2 / 3;   -webkit-filter: invert(.75); filter: invert(.75);}
 #refresh { grid-area: 1 / 3 / 2 / 4; }
 #inpuVt2 { grid-area: 1 / 4 / 2 / 5; }
 /* grid end */ 
