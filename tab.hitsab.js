@@ -19,7 +19,7 @@ var logged = false
 var restlist = ['actab','tab','actabn','actabm','proxy']
 var rest = {
     'actab' : 'new_tab_1',
-    'tab' : 0,
+    'tab' : 1,
     'actabn' : 0,
     'actabm' :	0,
     'proxy' : 'on'
@@ -226,7 +226,7 @@ function ltab() {
             }
         }
         else {
-            localStorage.setItem("tab", 0);
+            localStorage.setItem("tab", 1);
         }
     } else {
         console.log("[info] Web sotrage disable")
