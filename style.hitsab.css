@@ -106,10 +106,7 @@ body {margin-top:0px;margin-left:0px}
     font-size: 16px;
     outline: none;
 }
-#refresh {
-    position: fixed;
-    right: 88.5%;
-}
+
 /* grid */
 #inputs {
     display: grid;
@@ -130,10 +127,8 @@ body {margin-top:0px;margin-left:0px}
     outline: none;
     padding-inline-end: 9px;
     padding-inline-start: 9px;
-    position: fixed;
     width: 86%;
     height: 20px;
-    right: 3px;
 }
 
 /* search bar V2 end */
