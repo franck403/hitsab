@@ -75,8 +75,8 @@ function search(id) {
     }
     document.getElementById("inputb").value = "";
     var iframe = document.getElementById("vew_tab_" + id)
-    const iname = iframe.contentWindow.document.title;
-    document.getElementById(id).textContent = iname;
+    // const iname = iframe.contentWindow.document.title;
+    // document.getElementById(id).textContent = iname;
 }
 function searchV2(id) {
     var moteur = "https://www.google.com/search?q="
@@ -121,6 +121,6 @@ function searchV2(id) {
     }
     document.getElementById("inpuVt2").value = "";
     var iframe = document.getElementById("vew_tab_" + id)
-    const iname = iframe.contentWindow.document.title;
-    document.getElementById(id).textContent = iname;
+    // const iname = iframe.contentWindow.document.title;
+    // document.getElementById(id).textContent = iname;
 }
