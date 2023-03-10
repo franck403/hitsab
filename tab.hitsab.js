@@ -14,7 +14,7 @@ console.log("-----------------------------");
 
 var keys = localStorage.getItem("computerid");
 var keyid = sessionStorage.getItem("session");
-var ioinefe = localStorage.setItem("tab_log_data", "");
+var ioinefe = localStorage.setItem("tab_log", "");
 var logged = false
 var restlist = ['actab','tab','actabn','actabm','proxy']
 var rest = {
@@ -63,39 +63,26 @@ function end() {
         element.classList.add('tab');
     });
 }
-function old_new_log(id,act,sact="nothing") {
+function old_new_log(id,act,hact="1",sact="nothing") {
     if (act == "get") {
         // exemple of the look in localStorage
-        // 1>new-tab{<old-tab{*2>new-tab{<old-tab{
-        const old = localStorage.getItem("tab_log_data");
-        const main = old.split("*")
-        var id_tab = []
-        var malin = []
-        main.forEach((element) => {
-            var to_split = element.split(">")
-            if (to_split[0] == id) {
-            var malin = to_split.split("<")
-            } else {}
-        });
-        return malin[sact]
+        // tab 0 = 1;https://revu.geoloup.com,2;https://revu.geoloup.com/view
+        // tab,tab,tab
+
+        // code for get the data and verfy if its good
+        id = sessionStorage.getItem("tab_log");
+        id1 = sessionStorage.getItem("tab_content_" + id);
+        fh = id.split(",")
+        verfy = "no"
+        fh.forEach((data) => {if (data == "tab" + id) {verfy = "yes"} else {}});
+        // check is here
+        if (verfy == "yes") {
+            fi = id1.split(";")
+            
+        } else {
+            console.log("[info nothing about this tab]")
+        }
     } else if(act == "collect") {
-        // sact exemple : [id,[[new,new,etc],[old,old,etc]]]
-        // prepare the data part 1
-        var m = sact[0]
-        var m1 = sact[1]
-        var m2 = m1[1]
-        var m3 = m1[2]
-        // prepare the data part 2
-        const old = localStorage.getItem("tab_log_data");
-        const main = old.split("*")
-        var id_tab = []
-        var malin = []
-        main.forEach((element) => {
-            var to_split = element.split(">")
-            if (to_split[0] == id) {
-            var malin = to_split.split("<")
-            } else {}
-        });
     } else{}
 
 }
