@@ -14,20 +14,25 @@ console.log("-----------------------------");
 
 var keys = localStorage.getItem("computerid");
 var keyid = sessionStorage.getItem("session");
-var ioinefe = localStorage.setItem("tab_log", "");
 var logged = false
-var restlist = ['actab','tab','actabn','actabm','proxy']
+var restlist = ['actab','tab','actabn','actabm','proxy','tab_log']
 var rest = {
     'actab' : 'new_tab_1',
     'tab' : 1,
     'actabn' : 0,
     'actabm' :	0,
-    'proxy' : 'on'
+    'proxy' : 'on',
+    'tab_log':'[]'
 }
 
 if (keys != null) {
     console.log("computer logged")
     var logged = true
+    rts = restlist[5]
+    localStorage.getItem(rts)
+    rts.forEach(tg => {
+        localStorage.removeItem(tg)
+    });
 }
 else {
     localStorage.setItem("tab", 0);
@@ -78,7 +83,7 @@ function old_new_log(id,act,hact="1",sact="nothing") {
         // check is here
         if (verfy == "yes") {
             fi = id1.split(";")
-            
+
         } else {
             console.log("[info nothing about this tab]")
         }
