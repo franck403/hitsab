@@ -110,7 +110,7 @@ body {margin-top:0px;margin-left:0px}
 /* grid */
 #inputs {
     display: grid;
-    grid-template-columns: repeat(3, 5%) 85%;
+    grid-template-columns: repeat(3, 32px) 1fr;
     grid-template-rows: 38px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
