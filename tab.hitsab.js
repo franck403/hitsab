@@ -18,7 +18,7 @@ var logged = false
 var restlist = ['actab','tab','actabn','actabm','proxy','tab_log']
 var rest = {
     'actab' : 'new_tab_1',
-    'tab' : 1,
+    'tab' : 0,
     'actabn' : 0,
     'actabm' :	0,
     'proxy' : 'on',
@@ -250,7 +250,7 @@ function ltab() {
 }
 function fresh() {
     const mtab = parseFloat(localStorage.getItem("tab"));
-    localStorage.setItem("tab", 1)
+    localStorage.setItem("tab", 0)
     if (mtab < 30) {
         var ctab = 1
         while (ctab < mtab) {
