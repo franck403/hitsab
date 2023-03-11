@@ -26,6 +26,7 @@ function iframe_check(id) {
 }
 
 function search(id) {
+    document.getElementById("hitsab_loader").setAttribute("style","visibility: visible");
     var moteur = "https://www.google.com/search?q="
     var url = document.getElementById("inputb").value;
     console.log(urlify(url))
@@ -77,8 +78,12 @@ function search(id) {
     var iframe = document.getElementById("vew_tab_" + id)
     // const iname = iframe.contentWindow.document.title;
     // document.getElementById(id).textContent = iname;
+    document.querySelector("#new_tab_" + id).addEventListener("load", ev => {
+        document.getElementById("hitsab_loader").setAttribute("style","visibility: hidden");
+    })
 }
 function searchV2(id) {
+    document.getElementById("hitsab_loader").setAttribute("style","visibility: visible");
     var moteur = "https://www.google.com/search?q="
     var url = document.getElementById("inpuVt2").value;
     console.log(urlify(url))
@@ -123,4 +128,7 @@ function searchV2(id) {
     var iframe = document.getElementById("vew_tab_" + id)
     // const iname = iframe.contentWindow.document.title;
     // document.getElementById(id).textContent = iname;
+    document.querySelector("#new_tab_" + id).addEventListener("load", ev => {
+        document.getElementById("hitsab_loader").setAttribute("style","visibility: hidden");
+    })
 }
