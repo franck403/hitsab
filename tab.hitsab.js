@@ -22,7 +22,7 @@ var rest = {
     'actabn' : 0,
     'actabm' :	0,
     'proxy' : 'on',
-    'tab_log':'[]'
+    'tab_log':''
 }
 
 if (keys != null) {
@@ -68,19 +68,19 @@ function end() {
         element.classList.add('tab');
     });
 }
-function old_new_log(id,act,hact="1",sact="nothing") {
+function old_new_log(id,act,sact="nothing") {
     if (act == "get") {
         // exemple of the look in localStorage
         // tab_content_*num* = *actual page in the list*!1'https://revu.geoloup.com,2'https://revu.geoloup.com/view
-        // tab_log = *tab*,*tab*,*tab*
+        // tab_log = *tab_id*,*tab_id*,*tab_id*
         
         // code for get the data and verfy if its good
-        id = localStorage.getItem("tab_log");
+        ids = localStorage.getItem("tab_log");
         id1 = localStorage.getItem("tab_content_" + id);
-        fy = id.split("!")
-        fh = id.split(",")
+        fy = ids.split("!")
+        fh = ids.split(",")
         verfy = "no"
-        fh.forEach((data) => {if (data == "tab" + id) {verfy = "yes"} else {}});
+        fh.forEach((data) => {if (data == "tab_" + id) {verfy = "yes"} else {}});
         // check is here
         if (verfy == "yes") {
             fi = id1.split(",")
@@ -94,6 +94,20 @@ function old_new_log(id,act,hact="1",sact="nothing") {
             console.log("[info] nothing about this tab")
         }
     } else if(act == "collect") {
+        // tab_content_*num* = *actual page in the list*!1'https://revu.geoloup.com,2'https://revu.geoloup.com/view
+        // tab_log = *tab_id*,*tab_id*,*tab_id*
+
+        // first check if the tab is in the history
+        ids = localStorage.getItem("tab_log")
+        fk = ids.split(",")
+        verfy = "no"
+        fk.forEach((data) => {if (data == "tab_" + id) {verfy = "yes";console.log("[info] Tab found")} else {}});
+        if (verfy == "yes") { // if verfy pass the check set the new information
+            id1 = localStorage.setItem("tab_content_" + id,"1!1'" + sact + ",");
+        } else { // if not pass the check add the tab to the list
+            localStorage.setItem("tab_log",ids+",tab"+"")
+            id1 = localStorage.setItem("tab_content_" + id,"1!1'" + sact + ",");
+        }
     } else{}
 
 }
