@@ -30,9 +30,12 @@ if (keys != null) {
     var logged = true
     rts = restlist[5]
     localStorage.getItem(rts)
-    rts.forEach(tg => {
-        localStorage.removeItem(tg)
-    });
+    console.log(rts + "    " + Array.isArray(arr))
+    if (Array.isArray(arr)){
+        rts.forEach(tg => {
+            localStorage.removeItem(tg)
+        });
+    } else {}
 }
 else {
     localStorage.setItem("tab", 0);
