@@ -31,7 +31,7 @@ if (keys != null) {
     rts = restlist[5]
     localStorage.getItem(rts)
     console.log(rts + "    " + Array.isArray(arr))
-    if (Array.isArray(arr)){
+    if (Array.isArray(rts)){
         rts.forEach(tg => {
             localStorage.removeItem(tg)
         });
