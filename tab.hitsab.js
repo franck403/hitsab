@@ -71,10 +71,15 @@ function end() {
         element.classList.add('tab');
     });
 }
+
+function float(data) {
+    return parseFloat(data)
+}
+
 function old_new_log(id,act,sact="nothing") {
     if (act == "get") {
         // exemple of the look in localStorage
-        // tab_content_*num* = *actual page in the list*!1'https://revu.geoloup.com,2'https://revu.geoloup.com/view
+        // tab_content_*num* = *actual page in the list*!*number of tab in the history*!1'https://revu.geoloup.com,2'https://revu.geoloup.com/view
         // tab_log = *tab_id*,*tab_id*,*tab_id*
         
         // code for get the data and verfy if its good
@@ -86,18 +91,22 @@ function old_new_log(id,act,sact="nothing") {
         fh.forEach((data) => {if (data == "tab_" + id) {verfy = "yes"} else {}});
         // check is here
         if (verfy == "yes") {
+            fij = id1.split("!") // get the actual number of the tab in the history
             fi = id1.split(",")
+
             fi.forEach((data) => {
                 var data2 = data.split("'")
                 if (data2 == hact) {
                     verfy2 = "yes"
                 } else {}
             });
+            return datre
         } else { // if check not pass
             console.log("[info] nothing about this tab")
+            return (error)
         }
     } else if(act == "collect") {
-        // tab_content_*num* = *actual page in the list*!1'https://revu.geoloup.com,2'https://revu.geoloup.com/view
+        // tab_content_*num* = *actual page in the list*!*number of tab in the history*!1'https://revu.geoloup.com,2'https://revu.geoloup.com/view
         // tab_log = *tab_id*,*tab_id*,*tab_id*
 
         // first check if the tab is in the history
@@ -106,10 +115,13 @@ function old_new_log(id,act,sact="nothing") {
         verfy = "no"
         fk.forEach((data) => {if (data == "tab_" + id) {verfy = "yes";console.log("[info] Tab found")} else {}});
         if (verfy == "yes") { // if verfy pass the check set the new information
-            id1 = localStorage.setItem("tab_content_" + id,"1!1'" + sact + ",");
+            localStorage.setItem("tab_content_" + id,ids + "," + sact + ",");
+            dus = localStorage.getItem("tab_content_" + id)
+            dus1 = dus.split("!");dus1[1] = float(dus1[1]) + 1;dus1[0] = float(dus1[0]) - 1;dus1[0] = float(dus1[0]) + 2;dus1[0] = float(dus1[0]) - 1;
+            localStorage.setItem("tab_content_" + id,ids + "," + sact + ",");
         } else { // if not pass the check add the tab to the list
-            localStorage.setItem("tab_log",ids+",tab"+"")
-            id1 = localStorage.setItem("tab_content_" + id,"1!1'" + sact + ",");
+            localStorage.setItem("tab_log",ids + ",tab" + ",")
+            localStorage.setItem("tab_content_" + id,"1!1'" + sact + ",");
         }
     } else{}
 
