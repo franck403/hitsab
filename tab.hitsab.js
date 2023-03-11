@@ -30,7 +30,7 @@ if (keys != null) {
     var logged = true
     rts = restlist[5]
     localStorage.getItem(rts)
-    console.log(rts + "    " + Array.isArray(arr))
+    console.log(rts + "    " + Array.isArray(rts))
     if (Array.isArray(rts)){
         rts.forEach(tg => {
             localStorage.removeItem(tg)
