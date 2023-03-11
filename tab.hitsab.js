@@ -117,8 +117,8 @@ function old_new_log(id,act,sact="nothing") {
         if (verfy == "yes") { // if verfy pass the check set the new information
             localStorage.setItem("tab_content_" + id,ids + "," + sact + ",");
             dus = localStorage.getItem("tab_content_" + id)
-            dus1 = dus.split("!");dus1[1] = float(dus1[1]) + 1;dus1[0] = float(dus1[0]) - 1;dus1[0] = float(dus1[0]) + 2;dus1[0] = float(dus1[0]) - 1;
-            localStorage.setItem("tab_content_" + id,ids + "," + sact + ",");
+            dus1 = dus.split("!");dus1[1] = float(dus1[1]) + 1;dus1[0] = float(dus1[0]) - 1;dus1[0] = float(dus1[0]) + 2;dus1[0] = float(dus1[0]) - 1;dus1[2] = String(dus[2]) + ids + "," + sact + ","
+            localStorage.setItem("tab_content_" + id,dus );
         } else { // if not pass the check add the tab to the list
             localStorage.setItem("tab_log",ids + ",tab" + ",")
             localStorage.setItem("tab_content_" + id,"1!1'" + sact + ",");
