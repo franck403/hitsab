@@ -71,12 +71,13 @@ function end() {
 function old_new_log(id,act,hact="1",sact="nothing") {
     if (act == "get") {
         // exemple of the look in localStorage
-        // tab_content_*num* = 1;https://revu.geoloup.com,2;https://revu.geoloup.com/view
+        // tab_content_*num* = *actual page in the list*!1'https://revu.geoloup.com,2'https://revu.geoloup.com/view
         // tab_log = *tab*,*tab*,*tab*
         
         // code for get the data and verfy if its good
         id = localStorage.getItem("tab_log");
         id1 = localStorage.getItem("tab_content_" + id);
+        fy = id.split("!")
         fh = id.split(",")
         verfy = "no"
         fh.forEach((data) => {if (data == "tab" + id) {verfy = "yes"} else {}});
@@ -84,7 +85,7 @@ function old_new_log(id,act,hact="1",sact="nothing") {
         if (verfy == "yes") {
             fi = id1.split(",")
             fi.forEach((data) => {
-                var data2 = data.split(";")
+                var data2 = data.split("'")
                 if (data2 == hact) {
                     verfy2 = "yes"
                 } else {}
