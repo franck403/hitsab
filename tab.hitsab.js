@@ -264,7 +264,7 @@ function fresh() {
     const mtab = parseFloat(localStorage.getItem("tab"));
     localStorage.setItem("tab", 0)
     if (mtab < 30) {
-        var ctab = 0
+        var ctab = 1
         while (ctab < mtab) {
             console.log("[info] Loading tab.")
             wtab(parseFloat(localStorage.getItem("tab")));
@@ -301,7 +301,7 @@ const mods3 = document.getElementById('inputs');
 mods2.setAttribute("onclick","search(" + 1 + ")")
 mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 1 + ")}")
 mods3.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 1 + ")}")
-setCookie("actabn",1)
+setCookie("actabn",0)
 
 fresh()
 
