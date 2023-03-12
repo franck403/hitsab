@@ -153,7 +153,7 @@ function tab0(id){
         mods4.setAttribute("onclick","refresh(" + id + ")")
         mods2.setAttribute("onclick","search(" + id + ")")
         mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + id + ")}")
-        mods3.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + id + ")}")
+        mods3.setAttribute("onkeydown","if(event.key == 'Enter'){searchV2(" + id + ")}")
     } else {
         var iframe = document.createElement('iframe');
         document.getElementById("navigator").appendChild(iframe);
