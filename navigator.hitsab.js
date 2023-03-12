@@ -86,7 +86,7 @@ function searchV2(id) {
     document.getElementById("hitsab_loader").setAttribute("style","visibility: visible");
     var moteur = "https://www.google.com/search?q="
     var url = document.getElementById("inpuVt2").value;
-    console.log(url)
+    console.log("data : " + url)
     console.log(urlify(url))
     if (urlify(url) == -1) {
         var nurl = moteur + url + "&igu=1"
