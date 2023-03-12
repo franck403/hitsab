@@ -264,7 +264,7 @@ function fresh() {
     const mtab = parseFloat(localStorage.getItem("tab"));
     localStorage.setItem("tab", 0)
     if (mtab < 30) {
-        var ctab = 1
+        var ctab = 0
         while (ctab < mtab) {
             console.log("[info] Loading tab.")
             wtab(parseFloat(localStorage.getItem("tab")));
