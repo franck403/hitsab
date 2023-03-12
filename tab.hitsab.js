@@ -299,8 +299,8 @@ const mods1 = document.getElementById('input');
 const mods2 = document.getElementById('inputimg');
 const mods3 = document.getElementById('inputs');
 mods2.setAttribute("onclick","search(" + 1 + ")")
-mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 1 + ")}")
-mods3.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 1 + ")}")
+mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 0 + ")}")
+mods3.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 0 + ")}")
 setCookie("actabn",0)
 
 fresh()
