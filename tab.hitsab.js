@@ -218,7 +218,9 @@ function close() {
         setCookie("actabm",id + 1)
         tab0(id);
         tab1(id);
-        tab.remove();
+        tab.remove();        
+        document.getElementById("div_" + id).remove();
+
     }
 
 }
@@ -301,7 +303,7 @@ const mods3 = document.getElementById('inputs');
 mods2.setAttribute("onclick","search(" + 1 + ")")
 mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 0 + ")}")
 mods3.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 0 + ")}")
-setCookie("actabn",0)
+setCookie("actabn",1)
 
 fresh()
 
