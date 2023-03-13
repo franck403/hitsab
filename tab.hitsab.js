@@ -134,26 +134,34 @@ function old(id) {
 }
 
 function tab0(id){
+    try {
     const mods3 = document.getElementById("div_" + id);
     mods3.setAttribute("class","active")
     const mods4 = document.getElementById("div_" + getCookie("actabn"));
     mods4.setAttribute("class","hide")
+    } catch {
+        console.info("[error] class changer bug")
+    }
 
     url = getCookie("new_tab_" + id);
     if (url == null) {
-        // change all the search bar
-        const mods1 = document.getElementById('input');
-        const mods2 = document.getElementById('inputimg');
-        const mods3 = document.getElementById('inputs');
-        const mods4 = document.getElementById('refresh');
-        const mods5 = document.getElementById('old');
-        const mods6 = document.getElementById('new'); 
-        mods5.setAttribute("onclick","old(" + id + ")")
-        mods6.setAttribute("onclick","snew(" + id + ")")
-        mods4.setAttribute("onclick","refresh(" + id + ")")
-        mods2.setAttribute("onclick","search(" + id + ")")
-        mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + id + ")}")
-        mods3.setAttribute("onkeydown","if(event.key == 'Enter'){searchV2(" + id + ")}")
+        try  {
+            // change all the search bar
+            const mods1 = document.getElementById('input');
+            const mods2 = document.getElementById('inputimg');
+            const mods3 = document.getElementById('inputs');
+            const mods4 = document.getElementById('refresh');
+            const mods5 = document.getElementById('old');
+            const mods6 = document.getElementById('new'); 
+            mods5.setAttribute("onclick","old(" + id + ")")
+            mods6.setAttribute("onclick","snew(" + id + ")")
+            mods4.setAttribute("onclick","refresh(" + id + ")")
+            mods2.setAttribute("onclick","search(" + id + ")")
+            mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + id + ")}")
+            mods3.setAttribute("onkeydown","if(event.key == 'Enter'){searchV2(" + id + ")}")
+        } catch {
+            console.alert("error mods changer get a error")
+        }
     } else {
         var iframe = document.createElement('iframe');
         document.getElementById("navigator").appendChild(iframe);
