@@ -330,7 +330,8 @@ if ("serviceWorker" in navigator) {
     );
 } else {console.error("Service workers are not supported.");}
 restlist.forEach(to_rest => {
-    if (to_rest < 0) {
+    var ht = localStorage.getItem(to_rest)
+    if (ht < 0) {
         var gc = rest[to_rest]
         localStorage.setItem(to_rest, gc);
     } else {}
