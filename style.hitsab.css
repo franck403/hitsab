@@ -108,13 +108,13 @@ body {margin-top:0px;margin-left:0px}
     outline: none;
 }
 
-/* grid */
+/* research css placing */
 #inputs {
     display: flex;
 }
 #new {transform: scaleX(-1);}
 
-/* grid end */ 
+/* research css placing end */ 
 #inpuVt2 {
     border: none;
     border-radius: calc(0.5 * 44px);
@@ -122,10 +122,8 @@ body {margin-top:0px;margin-left:0px}
     outline: none;
     padding-inline-end: 9px;
     padding-inline-start: 9px;
-    display:flex;
+    width: calc(100vw - 100px);
     height: 20px;
-    float:right;
-    margin-right: 103px;
 }
 
 /* search bar V2 end */
