@@ -227,7 +227,6 @@ function close() {
         setCookie("actabm",id + 1)
         tab0(id);
         tab1(id);
-        tab.remove();        
         if (id != 0) {
             document.getElementById("div_" + id).remove();
         }
