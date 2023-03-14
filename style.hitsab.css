@@ -110,15 +110,9 @@ body {margin-top:0px;margin-left:0px}
 
 /* grid */
 #inputs {
-    display: grid;
-    grid-template-columns: 5% 95%;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    display: flex;
 }
-#grid2part { grid-area: 1 / 1 / 2 / 2; }
 #new {transform: scaleX(-1);}
-#inpuVt2 { grid-area: 1 / 2 / 2 / 3; }
 
 /* grid end */ 
 #inpuVt2 {
@@ -128,8 +122,10 @@ body {margin-top:0px;margin-left:0px}
     outline: none;
     padding-inline-end: 9px;
     padding-inline-start: 9px;
-    width: 86%;
+    display:flex;
     height: 20px;
+    float:right;
+    margin-right: 103px;
 }
 
 /* search bar V2 end */
