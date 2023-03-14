@@ -116,10 +116,10 @@ body {margin-top:0px;margin-left:0px}
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
-#old { grid-area: 1 / 1 / 2 / 2; }
-#new { grid-area: 1 / 2 / 2 / 3;transform: scaleX(-1);}
-#refresh { grid-area: 1 / 3 / 2 / 4; }
-#inpuVt2 { grid-area: 1 / 4 / 2 / 5; }
+#grid2part { grid-area: 1 / 1 / 2 / 2; }
+#new {transform: scaleX(-1);}
+#refresh {grid-area: 1 / 2 / 2 / 3;}
+#inpuVt2 { grid-area: 1 / 3 / 2 / 4;}
 /* grid end */ 
 #inpuVt2 {
     border: none;
