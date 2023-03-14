@@ -319,3 +319,14 @@ fresh()
 document.getElementById("close").addEventListener("click", close);
 
 document.getElementById("close2").addEventListener("click", close);
+
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.hitsab.js").then(
+      (registration) => {},
+      (error) => {
+        console.error(`Service worker registration failed: ${error}`);
+      }
+    );
+  } else {
+    console.error("Service workers are not supported.");
+  }
