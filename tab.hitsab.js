@@ -147,6 +147,7 @@ function tab0(id){
     if (url == null) {
         try  {
             // change all the search bar
+            document.getElementById("hitsab_loader").setAttribute("style","visibility: hidden");
             const mods1 = document.getElementById('input');
             const mods2 = document.getElementById('inputimg');
             const mods3 = document.getElementById('inputs');
