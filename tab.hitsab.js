@@ -228,8 +228,9 @@ function close() {
         tab0(id);
         tab1(id);
         tab.remove();        
-        document.getElementById("div_" + id).remove();
-
+        if (id != 0) {
+            document.getElementById("div_" + id).remove();
+        }
     }
 
 }
