@@ -328,6 +328,10 @@ if ("serviceWorker" in navigator) {
         console.error(`Service worker registration failed: ${error}`);
       }
     );
-  } else {
-    console.error("Service workers are not supported.");
-  }
+} else {console.error("Service workers are not supported.");}
+restlist.forEach(to_rest => {
+    if (to_rest < 0) {
+        var gc = rest[to_rest]
+        localStorage.setItem(to_rest, gc);
+    } else {}
+});
