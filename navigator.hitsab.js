@@ -128,5 +128,6 @@ function searchV2(id) {
     // const iname = iframe.contentWindow.document.title;
     // document.getElementById(id).textContent = iname;
 }
-
+try {
 fetch("https://cors-anywhere.herokuapp.com/corsdemo?accessRequest=0bf6d5a656be88d36e17bf799413c94b3809a47bf635a0be4e9c879a5134f95e",{mode: "no-cors"});
+} catch {}

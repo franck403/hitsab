@@ -18,9 +18,9 @@ var logged = false
 var restlist = ['actab','tab','actabn','actabm','proxy','tab_log']
 var rest = {
     'actab' : 'new_tab_1',
-    'tab' : 0,
-    'actabn' : 0,
-    'actabm' :	0,
+    'tab' : 1,
+    'actabn' : 1,
+    'actabm' :	1,
     'proxy' : 'on',
     'tab_log':''
 }
@@ -311,7 +311,7 @@ const mods2 = document.getElementById('inputimg');
 const mods3 = document.getElementById('inputs');
 mods2.setAttribute("onclick","search(" + 1 + ")")
 mods1.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 0 + ")}")
-mods3.setAttribute("onkeydown","if(event.key == 'Enter'){search(" + 0 + ")}")
+mods3.setAttribute("onkeydown","if(event.key == 'Enter'){searchV2(" + 0 + ")}")
 setCookie("actabn",1)
 
 fresh()
