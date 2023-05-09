@@ -8,7 +8,6 @@ class hitsabnavigator extends HTMLElement {
 			var url = url.replaceAll("https://","https$|")
 			var url = url.replaceAll("http://","http$|")
 			console.log("https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url)
-			var url = elements[i].attributes.src.value = "https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url
 			var get = () => {
 				return fetch("https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url)
 				.then((reponse) => reponse.text())
