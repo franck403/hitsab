@@ -15,7 +15,7 @@ class hitsabnavigator extends HTMLElement {
 					return data
 				})
 			}
-			var website = get()
+			var website = await get()
 			console.log(website)
 			var website = website.replaceAll(url,"https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url)
 			elements[i].innerHTML = website
