@@ -21,3 +21,5 @@ class sandbox extends HTMLElement {
 		this.innerHTML = website
 	}
 }
+
+customElements.define("sandbox",sandbox);
