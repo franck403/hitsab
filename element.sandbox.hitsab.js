@@ -1,4 +1,4 @@
-class hitsab-navigator extends HTMLElement {
+class hitsabnavigator extends HTMLElement {
 	constructor() {
 		super();
 		var html = this.innerHTML
@@ -22,4 +22,4 @@ class hitsab-navigator extends HTMLElement {
 	}
 }
 
-customElements.define("hitsab-navigator",hitsab-navigator);
+customElements.define("hitsab-navigator",hitsabnavigator);
