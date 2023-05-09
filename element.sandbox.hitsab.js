@@ -5,7 +5,7 @@ class hitsabnavigator extends HTMLElement {
 		var element = document.getElementsByTagName("UL")
 
 		element.forEach((element) => {
-			var url = this.src
+			var url = element.src
 			var url = url.replaceAll("https://","https$|")
 			var url = url.replaceAll("http://","http$|")
 			var get = () => {
@@ -15,12 +15,12 @@ class hitsabnavigator extends HTMLElement {
 					return data
 				})
 			}
-			var url = this.src
+			var url = element.src
 			var website = get()
 			var urlr = url.replaceAll("https://","https$|")
 			var urlr = url.replaceAll("http://","http$|")
 			var website = website.replaceAll(url,"https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url)
-			this.innerHTML = website
+			element.innerHTML = website
 		});
 	}
 }
