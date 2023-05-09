@@ -48,16 +48,15 @@ function search(id) {
     }
     localStorage.setItem("tab", mtab);
     if (localStorage.getItem("proxy") == 'on') {
-        iframe.src = "https://HitsabEnvSystems.francoischouin1.repl.co/fetch/" + nurl.replace("https://","")
+        iframe.setAttribute("src", "https://HitsabEnvSystems.francoischouin1.repl.co/proxy/" + nurl)
     } else{
-        iframe.src = nurl
+        iframe.setAttribute("src", nurl)
     }
-    document.getElementById("navigator").appendChild(iframe);
     iframe.setAttribute("class", "window");
     iframe.setAttribute("id", "new_tab_" + id);
     iframe.setAttribute("scrolling", "yes")
     iframe.setAttribute("frameborder", "0")
-    iframe.setAttribute("allowfullscreen", "True")
+    document.getElementById("navigator").appendChild(iframe);
 
     var other = document.getElementsByTagName('iframe')["new_tab_" + id];
     try { 
