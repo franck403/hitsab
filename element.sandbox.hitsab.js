@@ -2,7 +2,7 @@ class hitsabnavigator extends HTMLElement {
 	constructor() {
 		super();
 		var html = this.innerHTML
-		var element = document.getElementsByTagName("UL")
+		var element = document.getElementsByTagName("hitsab-navigator")
 
 		element.forEach((element) => {
 			var url = element.src
