@@ -36,7 +36,7 @@ function search(id) {
     else {
         var nurl = url
     }
-    var iframe = document.createElement('iframe');
+    var iframe = document.createElement('sandbox');
     const mtab = parseFloat(localStorage.getItem("tab"));
     localStorage.setItem("tab", 1)
     var ctab = 0
@@ -47,17 +47,18 @@ function search(id) {
         localStorage.setItem("tab", ctab)
     }
     localStorage.setItem("tab", mtab);
+    if (localStorage.getItem("proxy") == 'on') {
+        iframe.src = "https://HitsabEnvSystems.francoischouin1.repl.co/fetch/" + nurl.replace("https://","")
+    } else{
+        iframe.src = nurl
+    }
     document.getElementById("navigator").appendChild(iframe);
     iframe.setAttribute("class", "window");
     iframe.setAttribute("id", "new_tab_" + id);
     iframe.setAttribute("scrolling", "yes")
     iframe.setAttribute("frameborder", "0")
     iframe.setAttribute("allowfullscreen", "True")
-    if (localStorage.getItem("proxy") == 'on') {
-        iframe.setAttribute("src","https://HitsabEnvSystems.francoischouin1.repl.co/fetch/" + nurl.replace("https://",""))
-    } else{
-        iframe.setAttribute("src",nurl)
-    }
+
     var other = document.getElementsByTagName('iframe')["new_tab_" + id];
     try { 
         setCookie("actab", "new_tab_" + id);
