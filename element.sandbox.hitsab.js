@@ -1,13 +1,14 @@
 class hitsabnavigator extends HTMLElement {
 	constructor() {
 		super();
-		var html = this.innerHTML
-		var element = document.getElementsByTagName("hitsab-navigator")
-
-		element.forEach((element) => {
-			var url = element.src
+		var elements = document.getElementsByTagName("hitsab-navigator")
+		for (let i = 0; i < elements.length; i++) {
+			var url = elements[i].attributes.src.value
+			console.log(url)
 			var url = url.replaceAll("https://","https$|")
 			var url = url.replaceAll("http://","http$|")
+			console.log("https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url)
+			var url = elements[i].attributes.src.value = "https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url
 			var get = () => {
 				return fetch("https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url)
 				.then((reponse) => reponse.text())
@@ -15,13 +16,11 @@ class hitsabnavigator extends HTMLElement {
 					return data
 				})
 			}
-			var url = element.src
 			var website = get()
-			var urlr = url.replaceAll("https://","https$|")
-			var urlr = url.replaceAll("http://","http$|")
+			console.log(website)
 			var website = website.replaceAll(url,"https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url)
-			element.innerHTML = website
-		});
+			elements[i].innerHTML = website
+		};
 	}
 }
 
