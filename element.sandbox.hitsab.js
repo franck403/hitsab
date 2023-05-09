@@ -1,4 +1,4 @@
-class sandbox extends HTMLElement {
+class hitsab-navigator extends HTMLElement {
 	constructor() {
 		super();
 		var html = this.innerHTML
@@ -22,4 +22,4 @@ class sandbox extends HTMLElement {
 	}
 }
 
-customElements.define("sandbox",sandbox);
+customElements.define("hitsab-navigator",hitsab-navigator);

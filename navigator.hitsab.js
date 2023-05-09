@@ -36,7 +36,7 @@ function search(id) {
     else {
         var nurl = url
     }
-    var iframe = document.createElement('sandbox');
+    var iframe = document.createElement('hitsab-navigator');
     const mtab = parseFloat(localStorage.getItem("tab"));
     localStorage.setItem("tab", 1)
     var ctab = 0
