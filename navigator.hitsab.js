@@ -13,17 +13,6 @@ function urlify(text) {
     var urlRegex = /(https?:\/\/[^\s]+)/g;
     return text.search(urlRegex, function(url) {return url;})
   }
-function iframe_check(id) {
-    try {
-        console.log(id)
-        var iframe = document.getElementById("new_tab_" + id);
-        var elmnt = iframe.contentWindow.document.getElementsByClassName("neterror");;
-        console.log(wlmnt)
-        return "error"
-    } catch {
-        return "ok"
-    }
-}
 
 function search(id) {
     document.getElementById("hitsab_loader").setAttribute("style","visibility: visible");
@@ -63,7 +52,6 @@ function search(id) {
         setCookie("actab", "new_tab_" + id);
         setCookie("actabn",id)
         other.setAttribute("style","visibility: visible;");
-        var test = iframe_check(id);
         if (test == "error") {
             tester.document.getElementById("new_tab_" + id);
             tester.remove();
@@ -76,8 +64,6 @@ function search(id) {
     }
     document.getElementById("inputb").value = "";
     var iframe = document.getElementById("vew_tab_" + id)
-    // const iname = iframe.contentWindow.document.title;
-    // document.getElementById(id).textContent = iname;
 }
 function searchV2(id) {
     document.getElementById("hitsab_loader").setAttribute("style","visibility: visible");
@@ -125,6 +111,4 @@ function searchV2(id) {
     }
     document.getElementById("inpuVt2").value = "";
     var iframe = document.getElementById("vew_tab_" + id)
-    // const iname = iframe.contentWindow.document.title;
-    // document.getElementById(id).textContent = iname;
 }
