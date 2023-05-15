@@ -17,7 +17,7 @@ class hitsabnavigator extends HTMLElement {
 					elements[i].innerHTML = website		
 					return data
 				})
-			get()
+			await get()
 			}
 		};
 	}
