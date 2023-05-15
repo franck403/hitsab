@@ -4,7 +4,6 @@ class hitsabnavigator extends HTMLElement {
 		var elements = document.getElementsByTagName("hitsab-navigator")
 		for (let i = 0; i < elements.length; i++) {
 			var url = elements[i].attributes.src.value
-			console.log(url)
 			var url = url.replaceAll("https://","https$|")
 			var url = url.replaceAll("http://","http$|")
 			console.log("https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url)
