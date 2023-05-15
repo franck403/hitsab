@@ -8,17 +8,17 @@ class hitsabnavigator extends HTMLElement {
 			var url = url.replaceAll("https://","https$|")
 			var url = url.replaceAll("http://","http$|")
 			console.log("https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url)
-			var get = () => {
+			var get = async () => {
 				return fetch(url)
 				.then((reponse) => reponse.text())
 				.then((data) => {
+					var website = data
+					var website = website.replaceAll(url,"https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url)
+					elements[i].innerHTML = website		
 					return data
 				})
+			get()
 			}
-			var website = await get()
-			console.log(website)
-			var website = website.replaceAll(url,"https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url)
-			elements[i].innerHTML = website
 		};
 	}
 }
