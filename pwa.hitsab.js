@@ -1,7 +1,7 @@
 class hitsabapp extends HTMLElement {
 	constructor() {
 		super();
-        localapi(this)
+        controller.pwa.install(this)
 	}
 }
 
