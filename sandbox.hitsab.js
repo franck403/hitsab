@@ -18,5 +18,4 @@ class hitsabnavigatorsandbox extends HTMLElement {
         await get()
 	}
 }
-
-customElements.define("hitsab-navigator-sandbox",hitsabnavigatorsandbox);
+customElements.define("sanbox",hitsabnavigatorsandbox,{ extends: "hitsab-navigator" });
