@@ -1,21 +1,25 @@
+const server = {
+    "api": {
+        "sandbox":{
+            "active":(sandbox,id,url) => {
+                document.getElementById(id).innerHTML = "<iframe src='" + url + "'></iframe>"
+            },
+            "disable":(sandbox,id) => {}
+        }
+    }
+}
+
+
+
 class hitsabnavigatorsandbox extends HTMLElement {
 	constructor() {
 		super();
-        var url = this.attributes.src.value
-        var url = url.replaceAll("https://","https$|")
-        var url = url.replaceAll("http://","http$|")
-        console.log("https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url)
-        var get = async () => {
-            return fetch(url)
-            .then((reponse) => reponse.text())
-            .then((data) => {
-                var website = data
-                var website = website.replaceAll(url,"https://hitsabenvsystems.francoischouin1.repl.co/proxy/" + url)
-                this.innerHTML = website
-                return data
-            })
+        var sandbox = this.attributes.sandbox
+        try {
+            local.sanbox.active(sandbox)
+        } catch {
+            server.api.sanbox.active(sandbox,this.attributes.id,this.attributes.src)
         }
-        await get()
 	}
 }
 customElements.define("sanbox",hitsabnavigatorsandbox,{ extends: "hitsab-navigator" });
