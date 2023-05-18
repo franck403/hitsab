@@ -9,4 +9,4 @@ class hitsabnavigatorsandbox extends HTMLElement {
         }
 	}
 }
-customElements.define("sanbox",hitsabnavigatorsandbox,{ extends: "hitsab-navigator" });
+customElements.define("hitsab-navigator",hitsabnavigatorsandbox);
