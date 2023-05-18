@@ -1,16 +1,3 @@
-const server = {
-    "api": {
-        "sandbox":{
-            "active":(sandbox,id,url) => {
-                document.getElementById(id).innerHTML = "<iframe src='" + url + "'></iframe>"
-            },
-            "disable":(sandbox,id) => {}
-        }
-    }
-}
-
-
-
 class hitsabnavigatorsandbox extends HTMLElement {
 	constructor() {
 		super();
