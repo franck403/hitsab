@@ -5,7 +5,11 @@ class hitsabnavigatorsandbox extends HTMLElement {
         try {
             local.sanbox.active(sandbox,this.attributes.id,this.attributes.src)
         } catch {
-            server.api.sanbox.active(sandbox,this.attributes.id,this.attributes.src)
+            try {
+                server.api.sanbox.active(sandbox,this.attributes.id,this.attributes.src)
+            } catch {
+                server.error.post_snapshot(server.error.snapshot.api())
+            }
         }
 	}
 }
