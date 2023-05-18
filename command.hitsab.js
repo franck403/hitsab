@@ -2,7 +2,7 @@ const local = {
     "command":{
         "sanbox_enable": (sandbox,id) => {
             try {
-                fetch("http://localhost:8030/api/sandbox/disable")
+                fetch("http://localhost:8030/api/sandbox/enable")
                 .then((response) => response.test())
                 .then((text) => {
                     document.getElementById(id).innerHTML="<iframe src=''>" + text + "</iframe>"
@@ -33,10 +33,32 @@ const local = {
 }
 
 const server = {
+    "command":{
+        "sanbox_enable": (sandbox,id) => {
+            try {
+                fetch("https://hitsab.francoischouin1/api/sandbox/enable")
+                .then((response) => response.test())
+                .then((text) => {
+                    document.getElementById(id).innerHTML="<iframe src=''>" + text + "</iframe>"
+                });
+            } catch {
+                return Error("hitsab is running in a navigator that is not hitsab")
+            }
+        },
+        "sanbox_disable":(sandbox,id) => {
+            try {
+                fetch("https://hitsab.francoischouin1/api/sandbox/disable")
+                .then((response) => response.test())
+                .then((text) => console.log(text));
+            } catch {
+                return Error("hitsab is running in a navigator that is not hitsab")
+            }
+        }
+    },
     "api": {
         "sandbox":{
             "active":(sandbox,id,url) => {
-                document.getElementById(id).innerHTML = "<iframe src='" + url + "'></iframe>"
+                document.getElementById(id).innerHTML = "<iframe src=''>" + url + "</iframe>"
             },
             "disable":(sandbox,id) => {
                 document.getElementById(id).innerHTML = "Sandbox was diasbled"
