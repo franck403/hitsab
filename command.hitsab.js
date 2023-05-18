@@ -2,7 +2,7 @@ const local = {
     "command":{
         "sanbox_enable": (sandbox,id) => {
             try {
-                fetch("http://localhost:8030/api/sandbox/enable")
+                fetch("http://localhost:8030/api/sandbox/enable?url" + sanbox)
                 .then((response) => response.test())
                 .then((text) => {
                     document.getElementById(id).innerHTML="<iframe src=''>" + text + "</iframe>"
@@ -13,7 +13,7 @@ const local = {
         },
         "sanbox_disable":(sandbox,id) => {
             try {
-                fetch("http://localhost:8030/api/sandbox/disable")
+                fetch("http://localhost:8030/api/sandbox/disable?url" + sanbox)
                 .then((response) => response.test())
                 .then((text) => console.log(text));
             } catch {
@@ -36,7 +36,7 @@ const server = {
     "command":{
         "sanbox_enable": (sandbox,id) => {
             try {
-                fetch("https://hitsab.francoischouin1/api/sandbox/enable")
+                fetch("https://hitsab.francoischouin1/api/sandbox/enable?url=" + sandbox)
                 .then((response) => response.test())
                 .then((text) => {
                     document.getElementById(id).innerHTML="<iframe src=''>" + text + "</iframe>"
@@ -47,7 +47,7 @@ const server = {
         },
         "sanbox_disable":(sandbox,id) => {
             try {
-                fetch("https://hitsab.francoischouin1/api/sandbox/disable")
+                fetch("https://hitsab.francoischouin1/api/sandbox/disable?url=" + sandbox)
                 .then((response) => response.test())
                 .then((text) => console.log(text));
             } catch {
