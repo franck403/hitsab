@@ -5,7 +5,7 @@ const local = {
                 fetch("http://localhost:8030/api/sandbox/enable?url=" + url)
                 .then((response) => response.test())
                 .then((text) => {
-                    document.getElementById(id).innerHTML="<iframe src=''>" + text + "</iframe>"
+                    document.getElementById(id).innerHTML="<iframe src='" + url + "'>" + text + "</iframe>"
                 });
             } catch {
                 return Error("hitsab is running in a navigator that is not hitsab")
@@ -39,7 +39,7 @@ const server = {
                 fetch("https://hitsab.francoischouin1/api/sandbox/enable?url=" + url)
                 .then((response) => response.test())
                 .then((text) => {
-                    document.getElementById(id).innerHTML="<iframe src=''>" + text + "</iframe>"
+                    document.getElementById(id).innerHTML="<iframe src='" + url + "'>" + text + "</iframe>"
                 });
             } catch {
                 return Error("Error will fetching public api")
