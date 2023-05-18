@@ -1,8 +1,8 @@
 const local = {
     "command":{
-        "sanbox_enable": (sandbox,id) => {
+        "sanbox_enable": (sandbox,id,url) => {
             try {
-                fetch("http://localhost:8030/api/sandbox/enable?url" + sanbox)
+                fetch("http://localhost:8030/api/sandbox/enable?url=" + url)
                 .then((response) => response.test())
                 .then((text) => {
                     document.getElementById(id).innerHTML="<iframe src=''>" + text + "</iframe>"
@@ -11,9 +11,9 @@ const local = {
                 return Error("hitsab is running in a navigator that is not hitsab")
             }
         },
-        "sanbox_disable":(sandbox,id) => {
+        "sanbox_disable":(sandbox,id,url) => {
             try {
-                fetch("http://localhost:8030/api/sandbox/disable?url" + sanbox)
+                fetch("http://localhost:8030/api/sandbox/disable?url=" + url)
                 .then((response) => response.test())
                 .then((text) => console.log(text));
             } catch {
@@ -34,9 +34,9 @@ const local = {
 
 const server = {
     "command":{
-        "sanbox_enable": (sandbox,id) => {
+        "sanbox_enable": (sandbox,id,url) => {
             try {
-                fetch("https://hitsab.francoischouin1/api/sandbox/enable?url=" + sandbox)
+                fetch("https://hitsab.francoischouin1/api/sandbox/enable?url=" + url)
                 .then((response) => response.test())
                 .then((text) => {
                     document.getElementById(id).innerHTML="<iframe src=''>" + text + "</iframe>"
@@ -45,9 +45,9 @@ const server = {
                 return Error("Error will fetching public api")
             }
         },
-        "sanbox_disable":(sandbox,id) => {
+        "sanbox_disable":(sandbox,id,url) => {
             try {
-                fetch("https://hitsab.francoischouin1/api/sandbox/disable?url=" + sandbox)
+                fetch("https://hitsab.francoischouin1/api/sandbox/disable?url=" + url)
                 .then((response) => response.test())
                 .then((text) => console.log(text));
             } catch {
@@ -58,11 +58,11 @@ const server = {
     "api": {
         "sandbox":{
             "active":(sandbox,id,url) => {
-                server.command.sanbox_enable()
+                server.command.sanbox_enable(sandbox,id,url)
             },
-            "disable":(sandbox,id) => {
+            "disable":(sandbox,id,url) => {
                 document.getElementById(id).innerHTML = "Sandbox was disabled"
-                server.command.sanbox_enable()
+                server.command.sanbox_disable(sandbox,id,url)
             }
         }
     }
